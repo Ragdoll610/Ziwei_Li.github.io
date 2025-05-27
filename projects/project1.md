@@ -1,7 +1,7 @@
 ---
 layout: project-detail
 title: 吊り下げ搬送下の面状柔軟物に対する...
-permalink: /projects/project1
+permalink: /Ziwei_Li.github.io/projects/project1
 ---
 
 ![System Overview](/images/project1.png)
