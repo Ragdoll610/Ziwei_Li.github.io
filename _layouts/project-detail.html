@@ -9,16 +9,16 @@
     <header class="site-header">
       <div class="site-title">Masahiro Hirano</div>
       <nav class="site-nav">
-        <a href="/" class="{% if page.url == '/' %}active{% endif %}">home</a>
-        <a href="/cv" class="{% if page.url == '/cv' %}active{% endif %}">cv</a>
-        <a href="/projects" class="{% if page.url contains '/projects' and page.layout != 'project-detail' %}active{% endif %}">project</a>
+        <a href="{{ site.baseurl }}/" class="{% if page.url == '/' %}active{% endif %}">home</a>
+        <a href="{{ site.baseurl }}/cv" class="{% if page.url == '/cv' %}active{% endif %}">cv</a>
+        <a href="{{ site.baseurl }}/projects" class="{% if page.url contains '/projects' and page.layout != 'project-detail' %}active{% endif %}">project</a>
       </nav>
     </header>
 
     <main class="container-wide">
       {{ content }}
       <div style="margin-top: 3rem;">
-        <a href="/projects">← 返回项目页</a>
+        <a href="{{ site.baseurl }}/projects">← 返回项目页</a>
       </div>
     </main>
   </body>
