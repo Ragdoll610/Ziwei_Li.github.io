@@ -1,7 +1,7 @@
 ---
 layout: project-detail
-title: ...
-permalink: /projects/project1.md
+title: 吊り下げ搬送下の面状柔軟物に対する...
+permalink: /projects/project1
 ---
 
 ![System Overview](/images/project1.png)
