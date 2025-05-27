@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ page.title | default: site.title }}</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      {% if page.url != "/" %}
+        <div class="site-title">Masahiro Hirano</div>
+      {% endif %}
+      <nav class="site-nav">
+        <a href="/" class="{% if page.url == '/' %}active{% endif %}">home</a>
+        <a href="/cv" class="{% if page.url == '/cv' %}active{% endif %}">cv</a>
+        <a href="/projects" class="{% if page.url == '/projects' %}active{% endif %}">project</a>
+      </nav>
+    </header>
+    <main class="{% if page.layout == 'project-detail' %}container-wide{% else %}container{% endif %}">
+      {{ content }}
+    </main>
+  </body>
+</html>
