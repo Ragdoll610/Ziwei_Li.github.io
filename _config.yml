@@ -1,0 +1,15 @@
+title: Ziwei Li
+description: Personal portfolio site powered by Jekyll
+baseurl: ""
+url: ""
+markdown: kramdown
+
+theme: minima
+
+navigation:
+  - text: about
+    url: /
+  - text: cv
+    url: /cv/
+  - text: project
+    url: /project/
