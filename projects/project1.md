@@ -1,7 +1,7 @@
 ---
 layout: project-detail
 title: ...
-permalink: /projects/project1
+permalink: /projects/project1.md
 ---
 
 
