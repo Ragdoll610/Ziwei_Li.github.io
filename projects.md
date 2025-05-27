@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Projects
-permalink: /projects
+permalink: /Ziwei_Li.github.io/projects
 ---
 
 <h1>Project</h1>
