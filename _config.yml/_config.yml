@@ -1,9 +1,10 @@
 title: Ziwei Li
 description: Personal portfolio site powered by Jekyll
 markdown: kramdown
-theme: minima
+# theme: minima
 url: ""
-baseurl: ""
+baseurl: "/Ziwei_Li.github.io"
+
 navigation:
   - text: home
     url: /
