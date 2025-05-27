@@ -8,7 +8,7 @@ permalink: /projects
 
 <div class="card-group">
   <h2>智能车系</h2>
-  <a href="/projects/project1" class="card">
+  <a href="{{ site.baseurl }}/projects/project1" class="card">...</a>
     <img src="/images/project1.png" alt="Project Image">
     <div class="card-content">
       <h3>MultiplaneGirl</h3>
