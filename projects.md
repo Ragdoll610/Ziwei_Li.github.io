@@ -11,7 +11,7 @@ permalink: /projects
   <a href="{{ site.baseurl }}/projects/project1" class="card">
     <img src="{{ site.baseurl }}/images/project1.png" alt="Project Image">
     <div class="card-content">
-      <h3>MultiplaneGirl</h3>
+      <h3>DC-DC電源</h3>
       <div class="date">2018/6–2022</div>
       <div class="detail">详细</div>
     </div>
@@ -23,7 +23,7 @@ permalink: /projects
   <a href="{{ site.baseurl }}/projects/project1" class="card">
     <img src="{{ site.baseurl }}/images/project1.png" alt="Project Image">
     <div class="card-content">
-      <h3>MultiplaneGirl</h3>
+      <h3>三輪車</h3>
       <div class="date">2018/6–2022</div>
       <div class="detail">详细</div>
     </div>
