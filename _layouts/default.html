@@ -9,15 +9,19 @@
   <header class="site-header">
     <div class="container">
       <div class="site-header-inner">
-        {% if page.url != "/" %}
-          <div class="site-title">ZIWEI LI</div>
-        {% else %}
-          <div class="site-title"></div> <!-- 保留占位 -->
-        {% endif %}
+        <!-- 始终保留 .site-title ，首页留空，其他页显示名字 -->
+        <div class="site-title">
+          {% unless page.url == "/" %}
+            Masahiro Hirano
+          {% endunless %}
+        </div>
         <nav class="site-nav">
-          <a href="{{ site.baseurl }}/" class="{% if page.url == '/' %}active{% endif %}">home</a>
-          <a href="{{ site.baseurl }}/cv" class="{% if page.url == '/cv' %}active{% endif %}">cv</a>
-          <a href="{{ site.baseurl }}/projects" class="{% if page.url == '/projects' %}active{% endif %}">project</a>
+          <a href="{{ site.baseurl }}/"
+             class="{% if page.url == '/' %}active{% endif %}">home</a>
+          <a href="{{ site.baseurl }}/cv"
+             class="{% if page.url == '/cv' %}active{% endif %}">cv</a>
+          <a href="{{ site.baseurl }}/projects"
+             class="{% if page.url == '/projects' %}active{% endif %}">project</a>
         </nav>
       </div>
     </div>
@@ -28,4 +32,3 @@
   </main>
 </body>
 </html>
-
