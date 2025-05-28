@@ -62,7 +62,7 @@ body {
 .card-group {
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   padding: 2rem;
   margin-bottom: 2rem;
 }
