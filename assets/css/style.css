@@ -5,39 +5,34 @@ body {
   color: #111;
 }
 
-/* ---------- Header ---------- */
+/* site-header 外层 */
 .site-header {
-  display: flex;
-  justify-content: space-between;  /* 左右对齐 */
-  align-items: center;
   border-bottom: 1px solid #ccc;
-  padding: 0.4rem 0;
+  padding: 0.1rem 0; /* 上下距离都缩小为 0.5rem */
 }
+
+/* Flex 内层：左右对齐 */
 .site-header-inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
-.site-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
+/* 标题占左并推导航到右 */
 .site-title {
   font-weight: bold;
+  margin-right: auto;
 }
 
+/* 导航链接 */
 .site-nav a {
   margin-left: 1rem;
   text-decoration: none;
   color: #111;
 }
-
 .site-nav a.active {
   color: #c933c3;
 }
+
 
 /* ---------- Containers ---------- */
 .container {
