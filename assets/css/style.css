@@ -7,8 +7,11 @@ body {
 
 /* ---------- Header ---------- */
 .site-header {
+  display: flex;
+  justify-content: space-between;  /* 左右对齐 */
+  align-items: center;
   border-bottom: 1px solid #ccc;
-  padding: 0.2rem 0;
+  padding: 0.4rem 0;
 }
 
 .site-header .container {
