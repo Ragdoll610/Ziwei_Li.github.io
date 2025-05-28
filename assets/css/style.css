@@ -8,7 +8,7 @@ body {
 /* site-header 外层 */
 .site-header {
   border-bottom: 1px solid #ccc;
-  padding: 2rem 0; /* 上下距离都缩小为 0.5rem */
+  padding: 1.5rem 0; /* 上下距离都缩小为 0.5rem */
 }
 .site-header .container {
   /* 清掉原本的 3rem 上下 margin */
