@@ -6,31 +6,38 @@
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
 </head>
 <body>
+  <!-- Header 与 default.html 保持一致 -->
   <header class="site-header">
     <div class="container">
       <div class="site-header-inner">
-        {% if page.url != "/" %}
-          <div class="site-title">ZIWEI LI</div>
-        {% else %}
-          <div class="site-title"></div> <!-- 保留占位 -->
-        {% endif %}
+        <!-- 除首页外显示名字 -->
+        <div class="site-title">
+          Masahiro Hirano
+        </div>
         <nav class="site-nav">
-          <a href="{{ site.baseurl }}/" class="{% if page.url == '/' %}active{% endif %}">home</a>
-          <a href="{{ site.baseurl }}/cv" class="{% if page.url == '/cv' %}active{% endif %}">cv</a>
-          <a href="{{ site.baseurl }}/projects" class="{% if page.url == '/projects' %}active{% endif %}">project</a>
+          <a href="{{ site.baseurl }}/"
+             class="{% if page.url == '/' %}active{% endif %}">home</a>
+          <a href="{{ site.baseurl }}/cv"
+             class="{% if page.url == '/cv' %}active{% endif %}">cv</a>
+          <a href="{{ site.baseurl }}/projects"
+             class="{% if page.url contains '/projects' and page.layout != 'project-detail' %}active{% endif %}">project</a>
         </nav>
       </div>
     </div>
   </header>
 
-    <main class="container-wide">
-      {{ content }}
-      <div style="margin-top: 3rem;">
-        <a href="{{ site.baseurl }}/projects">← 返回项目页</a>
-      </div>
-    </main>
-  </body>
+  <!-- 详细页使用全宽容器 -->
+  <main class="container-wide">
+    {{ content }}
+
+    <!-- 返回按钮 -->
+    <div style="margin-top: 3rem;">
+      <a href="{{ site.baseurl }}/projects">← 返回项目页</a>
+    </div>
+  </main>
+</body>
 </html>
+
 
 
 
