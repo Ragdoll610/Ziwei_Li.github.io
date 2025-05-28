@@ -8,11 +8,13 @@
   <body>
     <div class="site-header">
       <div class="container">
-        <div class="site-title">Masahiro Hirano</div>
+        {% unless page.url == "/" %}
+          <div class="site-title">ZIWEI LI</div>
+        {% endunless %}
         <nav class="site-nav">
           <a href="{{ site.baseurl }}/" class="{% if page.url == '/' %}active{% endif %}">home</a>
           <a href="{{ site.baseurl }}/cv" class="{% if page.url == '/cv' %}active{% endif %}">cv</a>
-          <a href="{{ site.baseurl }}/projects" class="{% if page.url == '/projects' %}active{% endif %}">project</a>
+          <a href="{{ site.baseurl }}/projects" class="{% if page.url == '/projects' or page.url contains '/projects/' %}active{% endif %}">project</a>
         </nav>
       </div>
     </div>
@@ -22,4 +24,3 @@
     </main>
   </body>
 </html>
-
