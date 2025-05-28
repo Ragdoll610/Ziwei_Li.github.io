@@ -33,6 +33,12 @@ body {
   font-weight: bold;
   margin-right: auto;
 }
+.site-title .first-name {
+  font-weight: 400; /* ZIWEI 不加粗 */
+}
+.site-title .last-name {
+  font-weight: 700; /* LI 加粗 */
+}
 
 /* 导航链接 */
 .site-nav a {
