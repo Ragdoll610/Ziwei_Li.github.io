@@ -12,8 +12,8 @@ permalink: /cv/
 </div>
 
 <div class="card-group">
-  <h2>Work</h2>
+  <h2>Education</h2>
   <ul>
-    <li>2020 - 現在: 東京大学 生産技術研究所 助教</li>
+    <li>2023 - 現在: 東京大学 工学研究科　機械工学 博士課程</li>
   </ul>
 </div>
