@@ -140,7 +140,7 @@ body {
 }
 .two-column .right {
   /* 这个值你可以微调，直到头像和正文第一行顶对齐 */
-  margin-top: 5rem;
+  margin-top: 4rem;
 }
 
 .profile-img {
