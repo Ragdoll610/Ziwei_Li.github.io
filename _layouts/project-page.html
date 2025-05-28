@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
+</head>
+<body>
+  <!-- Header 与 default.html 保持一致 -->
+  <header class="site-header">
+    <div class="container-wide">
+      <div class="site-header-inner">
+        <!-- 除首页外显示名字 -->
+        <div class="site-title">
+          ZIWEI LI
+        </div>
+        <nav class="site-nav">
+          <a href="{{ site.baseurl }}/"
+             class="{% if page.url == '/' %}active{% endif %}">home</a>
+          <a href="{{ site.baseurl }}/cv"
+             class="{% if page.url == '/cv' %}active{% endif %}">cv</a>
+          <a href="{{ site.baseurl }}/projects"
+             class="{% if page.url contains '/projects' and page.layout != 'project-detail' %}active{% endif %}">project</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- 详细页使用全宽容器 -->
+  <main class="container-wide">
+    {{ content }}
+
+    <!-- 返回按钮 -->
+    <div style="margin-top: 3rem;">
+      <a href="{{ site.baseurl }}/projects">← back to project list</a>
+    </div>
+  </main>
+</body>
+</html>
+
+
+
+
