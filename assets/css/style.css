@@ -5,7 +5,7 @@ body {
   color: #111;
 }
 
-/--------- site-header 外层 --------------/
+/*--------- site-header 外层 --------------*/
 .site-header {
   border-bottom: 1px solid #ccc;
   padding: 1.5rem 0; /* 上下距离都缩小为 0.5rem */
@@ -28,7 +28,7 @@ body {
   align-items: center;
 }
 
-/-------- 标题占左并推导航到右 --------------
+/*-------- 标题占左并推导航到右 --------------*/
 .site-title {
   font-weight: bold;
   margin-right: auto;
@@ -40,7 +40,7 @@ body {
   font-weight: 700; /* LI 加粗 */
 }
 
-/------------------- 导航链接 ----------*/
+/*------------------- 导航链接 ----------*/
 .site-nav a {
   margin-left: 1rem;
   text-decoration: none;
