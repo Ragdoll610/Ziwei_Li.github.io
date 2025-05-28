@@ -7,12 +7,14 @@
   </head>
   <body>
     <div class="site-header">
-      <div class="container-wide">
-        <div class="site-title">Masahiro Hirano</div>
+      <div class="container">
+        {% unless page.url == "/" %}
+          <div class="site-title">ZIWEI LI</div>
+        {% endunless %}
         <nav class="site-nav">
           <a href="{{ site.baseurl }}/" class="{% if page.url == '/' %}active{% endif %}">home</a>
           <a href="{{ site.baseurl }}/cv" class="{% if page.url == '/cv' %}active{% endif %}">cv</a>
-          <a href="{{ site.baseurl }}/projects" class="{% if page.url contains '/projects' and page.layout != 'project-detail' %}active{% endif %}">project</a>
+          <a href="{{ site.baseurl }}/projects" class="{% if page.url == '/projects' or page.url contains '/projects/' %}active{% endif %}">project</a>
         </nav>
       </div>
     </div>
