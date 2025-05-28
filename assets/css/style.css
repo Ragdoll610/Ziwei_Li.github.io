@@ -13,6 +13,11 @@ body {
   border-bottom: 1px solid #ccc;
   padding: 0.4rem 0;
 }
+.site-header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .site-header .container {
   display: flex;
