@@ -132,6 +132,10 @@ body {
 .right {
   flex: 1;
 }
+.two-column .right {
+  /* 这个值你可以微调，直到头像和正文第一行顶对齐 */
+  margin-top: 1.5rem;
+}
 
 .profile-img {
   width: 100%;
