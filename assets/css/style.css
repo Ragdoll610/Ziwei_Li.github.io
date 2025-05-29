@@ -150,23 +150,20 @@ body {
 }
 
 /*----------cv-contact-----------*/
-.contact-list {
-  line-height: 1.8;
-  font-size: 1rem;
-}
-.contact-list div {
+.contact-row {
   display: flex;
-  gap: 1.5rem;
-  margin-bottom: 0.3rem;
-  align-items: baseline;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
 }
-.contact-list dt {
+
+.contact-row .label {
   font-weight: bold;
-  min-width: 60px;   /* 可调整 label 宽度 */
+  min-width: 80px;
+  margin-right: 1rem;
   flex-shrink: 0;
 }
-.contact-list dd {
-  margin: 0;
-  text-align: left;     /* 确保文本靠左 */
-  flex: 1;              /* 让 dd 填满剩余空间 */
+
+.contact-row .value {
+  flex: 1;
+  line-height: 1.6;
 }
