@@ -30,7 +30,7 @@ permalink: /projects
 　<a href="{{ site.baseurl }}/projects/project1" class="card">
     <img src="{{ site.baseurl }}/images/project1.png" alt="Project Image">
     <div class="card-content">
-      <h3>DC-DC電源</h3>
+      <h3>AC-DC電源</h3>
       <div class="date">2018/6–2022</div>
       <div class="detail">詳細</div>
     </div>
@@ -39,7 +39,16 @@ permalink: /projects
 　<a href="{{ site.baseurl }}/projects/project1" class="card">
     <img src="{{ site.baseurl }}/images/project1.png" alt="Project Image">
     <div class="card-content">
-      <h3>DC-DC電源</h3>
+      <h3>DC-AC電源</h3>
+      <div class="date">2018/6–2022</div>
+      <div class="detail">詳細</div>
+    </div>
+  </a>
+
+　<a href="{{ site.baseurl }}/projects/project1" class="card">
+    <img src="{{ site.baseurl }}/images/project1.png" alt="Project Image">
+    <div class="card-content">
+      <h3>モータードライバ</h3>
       <div class="date">2018/6–2022</div>
       <div class="detail">詳細</div>
     </div>
