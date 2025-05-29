@@ -3,7 +3,7 @@ layout: default
 title: publication
 permalink: /publication/
 ---
-<h1>Project</h1>
+<h1>Publication</h1>
 
 <div class="card-group">
   <h2>Contact</h2>
