@@ -10,9 +10,10 @@ permalink: /projects/project5
   1）KEA
 </div>
 
-<h3>回路図に使用した主な部品一覧</h3>
+
 
 <div class="container">
+  <h3>回路図に使用した主な部品一覧</h3>
   <table>
     <thead>
       <tr>
