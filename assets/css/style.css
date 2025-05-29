@@ -157,7 +157,7 @@ body {
 }
 
 .contact-row .label {
-  width: 120px;
+  width: 140px;
   margin-right: 2rem;
   font-weight: bold;
   flex-shrink: 0;
@@ -165,7 +165,7 @@ body {
 
 .contact-row .value {
   flex: 1;
-  width: 120px;
+  width: 140px;
 }
 
 /*--------cv-education---------*/
@@ -177,14 +177,14 @@ body {
 
 .edu-row .label {
   font-weight: bold;
-  width: 120px;   /* 时间栏宽度，按你内容实际微调 */
+  width: 140px;   /* 时间栏宽度，按你内容实际微调 */
   margin-right: 1.5rem;
   flex-shrink: 0;
 }
 
 .edu-row .value {
   flex: 1;
-  width: 120px;
+  width: 140px;
   line-height: 1.6;
 }
 
