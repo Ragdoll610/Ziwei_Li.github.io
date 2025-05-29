@@ -80,7 +80,8 @@ permalink: /cv/
   <h2>Campus activity</h2>
   <div class="edu-row">
     <div class="label">2019-2022</div>
-    <div class="value">華中科技大学 多スペクトル知能情報処理国家重点実験室　プロジェクトリーダー</div>
+    <div class="value">華中科技大学 多スペクトル知能情報処理国家重点実験室</div>
+    <div class="value">プロジェクトリーダー</div>
   </div>
   <div class="edu-row">
     <div class="label">2017-2018</div>
