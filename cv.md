@@ -20,11 +20,35 @@ permalink: /cv/
   <h2>Education</h2>
   <div class="edu-row">
     <div class="label">&nbsp;•&nbsp;2023 - 現在</div>
-    <div class="value">東京大学 工学研究科　機械工学　博士課程</div>
+    <div class="value">東京大学　機械工学専攻　博士課程在学</div>
   </div>
   <div class="edu-row">
     <div class="label">&nbsp;•&nbsp;2019 - 2022</div>
-    <div class="value">華中科技大学 工学研究科　電気・システム専攻　修士課程修了</div>
+    <div class="value">華中科技大学 電気・システム専攻　修士課程修了</div>
+  </div>
+  <div class="edu-row">
+    <div class="label">&nbsp;•&nbsp;2015 - 2019</div>
+    <div class="value">西南民族大学　オートメーションコース 卒業</div>
+  </div>
+</div>
+
+<div class="card-group">
+  <h2>Scholarship</h2>
+  <div class="edu-row">
+    <div class="label">2023.10 - 現在</div>
+    <div class="value">文部科学省国費外国人留学生奨学金</div>
+  </div>
+  <div class="edu-row">
+    <div class="label">2019.10、2021.10</div>
+    <div class="value">華中科技大学 学業優秀奨学金（一等賞、二等賞）</div>
+  </div>
+  <div class="edu-row">
+    <div class="label">2018.10</div>
+    <div class="value">中国国家奨学金(全国上位1％)</div>
+  </div>
+  <div class="edu-row">
+    <div class="label">2016.10、2017.10、2018.10</div>
+    <div class="value">華中科技大学 学業優秀奨学金（一等賞、二等賞、三等賞）</div>
   </div>
 </div>
 
