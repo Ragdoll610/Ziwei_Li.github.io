@@ -167,4 +167,6 @@ body {
 }
 .contact-list dd {
   margin: 0;
+  text-align: left;     /* 确保文本靠左 */
+  flex: 1;              /* 让 dd 填满剩余空间 */
 }
