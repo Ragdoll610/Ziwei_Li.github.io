@@ -226,9 +226,11 @@ body {
 }
 
 /*-------table------*/
+<style>
   table.custom-table {
     width: 100%;
     border-collapse: collapse;
+    font-size: 0.9em;
     border: 1px solid #ccc;
     text-align: left;
   }
@@ -237,22 +239,15 @@ body {
   table.custom-table td {
     border: 1px solid #ccc;
     padding: 0.5em 1em;
-  }
-
-  /* 右侧交替灰底（通过 .alt 控制） */
-  table.custom-table tr.alt td:not(:first-child) {
-    background-color: #f9f9f9;
-  }
-
-  /* 最左列固定白底 + 加粗 */
-  table.custom-table td:first-child {
     background-color: #ffffff;
-    font-weight: bold;
-  }
-
-  /* 第二列强制常规字体 */
-  table.custom-table td:nth-child(2) {
     font-weight: normal;
   }
+
+  table.custom-table th {
+    font-weight: bold;
+    background-color: #f2f2f2;
+  }
+</style>
+
 
 
