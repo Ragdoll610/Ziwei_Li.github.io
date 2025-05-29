@@ -108,18 +108,21 @@ permalink: /cv/
   </div>
 </div>
 
-<div class="language-grid">
-  <div>
-    <div class="lang-name">Chinese</div>
-    <div class="lang-level">Native</div>
-  </div>
-  <div>
-    <div class="lang-name">English</div>
-    <div class="lang-level">Business</div>
-  </div>
-  <div>
-    <div class="lang-name">Japanese</div>
-    <div class="lang-level">Daily life</div>
-  </div>
+<div class="card-group">
+    <h2>Language</h2>
+    <div class="language-grid">
+      <div>
+        <div class="lang-name">Chinese</div>
+        <div class="lang-level">Native</div>
+      </div>
+      <div>
+        <div class="lang-name">English</div>
+        <div class="lang-level">Business</div>
+      </div>
+      <div>
+        <div class="lang-name">Japanese</div>
+        <div class="lang-level">Daily life</div>
+      </div>
+    </div>
 </div>
 
