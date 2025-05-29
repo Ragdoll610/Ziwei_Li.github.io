@@ -230,7 +230,7 @@ body {
   table.custom-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.9em;
+    font-size: 0.8em;
     border: 1px solid #ccc;
     text-align: left;
   }
