@@ -216,7 +216,7 @@ body {
 /*-------project details--------*/
 .jp-title-box {
   background-color: #f0f0f0;  /* 灰底 */
-  color: #0000cc;             /* 蓝字 */
+  color: #8B0000;             /* 蓝字 */
   font-size: 1.1rem;
   font-weight: bold;
   padding: 0.5rem 1rem;
@@ -225,9 +225,4 @@ body {
   display: inline-block;
 }
 
-
-
-  width: 140px;
-  line-height: 1.6;
-}
 
