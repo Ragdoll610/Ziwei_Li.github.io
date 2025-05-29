@@ -10,34 +10,6 @@ permalink: /projects/project5
   1）KEA
 </div>
 
-<style>
-  table.custom-table {
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid #ccc;
-    text-align: left;
-  }
-
-  table.custom-table th,
-  table.custom-table td {
-    border: 1px solid #ccc;
-    padding: 0.5em 1em;
-  }
-
-  table.custom-table tbody tr:nth-child(even) td:not(:first-child) {
-    background-color: #f9f9f9;
-  }
-
-  table.custom-table tbody tr:nth-child(odd) td:not(:first-child) {
-    background-color: #eeeeee;
-  }
-
-  table.custom-table td:first-child {
-    background-color: #fff;
-    font-weight: bold;
-  }
-</style>
-
 <p>本研究では…（此处省略）...</p>
 
 <p>
