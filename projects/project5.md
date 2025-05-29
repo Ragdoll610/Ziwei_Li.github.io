@@ -10,10 +10,16 @@ permalink: /projects/project5
   1）KEA
 </div>
 
+<div class="container-wide">
 
+  <p>本研究では…（此处省略）...</p>
 
-<div class="container">
+  <p>
+    <img src="{{ site.baseurl }}/images/project5.svg" alt="System Overview">
+  </p>
+
   <h3>回路図に使用した主な部品一覧</h3>
+
   <table>
     <thead>
       <tr>
@@ -89,6 +95,5 @@ permalink: /projects/project5
       </tr>
     </tbody>
   </table>
+
 </div>
-
-
