@@ -66,10 +66,9 @@ body {
 
 /* ---------- Project Cards ---------- */
 .card-group {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem 1.5rem; /* 垂直间距、水平间距 */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
   
   background: #fff;
   border-radius: 10px;
@@ -77,6 +76,7 @@ body {
   padding: 2rem;
   margin-bottom: 1rem;
 }
+
 
 .card-group h2 {
   margin-top: 0;
