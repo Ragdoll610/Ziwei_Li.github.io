@@ -8,12 +8,13 @@ permalink: /projects
 
 <div class="card-group">
   <h2>回路設計</h2>
+  
   <a href="{{ site.baseurl }}/projects/project1" class="card">
     <img src="{{ site.baseurl }}/images/project1.png" alt="Project Image">
     <div class="card-content">
-      <h3>DC-DC電源</h3>
-      <div class="date">2018/6–2022</div>
-      <div class="detail">详细</div>
+      <h3>制御回路</h3>
+      <div class="date">2017/4–2019</div>
+      <div class="detail">詳細</div>
     </div>
   </a>
   
@@ -22,7 +23,7 @@ permalink: /projects
     <div class="card-content">
       <h3>DC-DC電源</h3>
       <div class="date">2018/6–2022</div>
-      <div class="detail">详细</div>
+      <div class="detail">詳細</div>
     </div>
   </a>
   
@@ -31,7 +32,7 @@ permalink: /projects
     <div class="card-content">
       <h3>DC-DC電源</h3>
       <div class="date">2018/6–2022</div>
-      <div class="detail">详细</div>
+      <div class="detail">詳細</div>
     </div>
   </a>
   
@@ -40,7 +41,7 @@ permalink: /projects
     <div class="card-content">
       <h3>DC-DC電源</h3>
       <div class="date">2018/6–2022</div>
-      <div class="detail">详细</div>
+      <div class="detail">詳細</div>
     </div>
   </a>
 
@@ -53,7 +54,7 @@ permalink: /projects
     <div class="card-content">
       <h3>三輪車</h3>
       <div class="date">2018/6–2022</div>
-      <div class="detail">详细</div>
+      <div class="detail">詳細</div>
     </div>
   </a>
 </div>
