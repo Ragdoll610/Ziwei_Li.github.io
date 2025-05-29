@@ -18,7 +18,7 @@ permalink: /projects
     </div>
   </a>
   
-　<a href="{{ site.baseurl }}/projects/project_ori" class="card">
+　<a href="{{ site.baseurl }}/projects/project2" class="card">
     <img src="{{ site.baseurl }}/images/project1.png" alt="Project Image">
     <div class="card-content">
       <h3>DC-DC電源</h3>
@@ -27,7 +27,7 @@ permalink: /projects
     </div>
   </a>
   
-　<a href="{{ site.baseurl }}/projects/project1" class="card">
+　<a href="{{ site.baseurl }}/projects/project3" class="card">
     <img src="{{ site.baseurl }}/images/project1.png" alt="Project Image">
     <div class="card-content">
       <h3>AC-DC電源</h3>
@@ -36,7 +36,7 @@ permalink: /projects
     </div>
   </a>
   
-　<a href="{{ site.baseurl }}/projects/project1" class="card">
+　<a href="{{ site.baseurl }}/projects/project4" class="card">
     <img src="{{ site.baseurl }}/images/project1.png" alt="Project Image">
     <div class="card-content">
       <h3>DC-AC電源</h3>
@@ -54,7 +54,7 @@ permalink: /projects
     </div>
   </a>
   
-　<a href="{{ site.baseurl }}/projects/project1" class="card">
+　<a href="{{ site.baseurl }}/projects/project6" class="card">
     <img src="{{ site.baseurl }}/images/project1.png" alt="Project Image">
     <div class="card-content">
       <h3>アナログ回路</h3>
@@ -63,7 +63,7 @@ permalink: /projects
     </div>
   </a>
   
-　<a href="{{ site.baseurl }}/projects/project1" class="card">
+　<a href="{{ site.baseurl }}/projects/project7" class="card">
     <img src="{{ site.baseurl }}/images/project1.png" alt="Project Image">
     <div class="card-content">
       <h3>非接触充電</h3>
@@ -75,7 +75,7 @@ permalink: /projects
 
 <div class="card-group">
   <h2>智能车</h2>
-  <a href="{{ site.baseurl }}/projects/project1" class="card">
+  <a href="{{ site.baseurl }}/projects/project8" class="card">
     <img src="{{ site.baseurl }}/images/project1.png" alt="Project Image">
     <div class="card-content">
       <h3>三輪車</h3>
