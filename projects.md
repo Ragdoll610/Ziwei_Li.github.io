@@ -47,7 +47,7 @@ permalink: /projects
 
 
   <a href="{{ site.baseurl }}/projects/project5" class="card">
-    <img src="{{ site.baseurl }}/images/project1.png" alt="Project Image">
+    <img src="{{ site.baseurl }}/images/project5.svg" alt="Project Image">
     <div class="card-content">
       <h3>モータードライバ</h3>
       <div class="date">2017/4–2019</div>
