@@ -158,14 +158,14 @@ body {
 
 .contact-row .label {
   width: 120px;
-  margin-right: 1rem;
+  margin-right: 2rem;
   font-weight: bold;
   flex-shrink: 0;
 }
 
 .contact-row .value {
   flex: 1;
-  line-height: 1.6;
+  width: 120px;
 }
 
 /*--------cv-education---------*/
