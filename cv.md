@@ -84,11 +84,11 @@ permalink: /cv/
   </div>
   <div class="edu-row">
     <div class="label">2017-2018</div>
-    <div class="value">西南民族大学　電子系サークル　副代表</div>
+    <div class="value">西南民族大学 電子系サークル　副代表</div>
   </div>
   <div class="edu-row">
     <div class="label">2016.2017</div>
-    <div class="value">西南民族大学　電子系サークル　開発部 副部長</div>
+    <div class="value">西南民族大学 電子系サークル　開発部 副部長</div>
   </div>
 </div>
 
