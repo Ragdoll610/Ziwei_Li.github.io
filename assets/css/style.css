@@ -230,8 +230,7 @@ body {
   table.custom-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.8em;
-    border: 1px solid #ccc;
+    font-size: 0.9em;
     text-align: left;
   }
 
@@ -239,13 +238,23 @@ body {
   table.custom-table td {
     border: 1px solid #ccc;
     padding: 0.5em 1em;
-    background-color: #ffffff;
+    background-color: #fff;
     font-weight: normal;
   }
 
   table.custom-table th {
     font-weight: bold;
     background-color: #f2f2f2;
+  }
+
+  /* 去掉 rowspan 单元格的下边框 */
+  table.custom-table td[rowspan] {
+    border-bottom: none;
+  }
+
+  /* 给紧接着 rowspan 的下一行的同一列 cell 去掉上边框 */
+  table.custom-table td.no-top-border {
+    border-top: none;
   }
 </style>
 
