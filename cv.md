@@ -34,19 +34,19 @@ permalink: /cv/
 
 <div class="card-group">
   <h2>Scholarship</h2>
-  <div class="edu-row">
+  <div class="sch-row">
     <div class="label">2023.10 - 現在</div>
     <div class="value">文部科学省国費外国人留学生奨学金</div>
   </div>
-  <div class="edu-row">
+  <div class="sch-row">
     <div class="label">2019.10、2021.10</div>
     <div class="value">華中科技大学 学業優秀奨学金（一等賞、二等賞）</div>
   </div>
-  <div class="edu-row">
+  <div class="sch-row">
     <div class="label">2018.10</div>
     <div class="value">中国国家奨学金(全国上位1％)</div>
   </div>
-  <div class="edu-row">
+  <div class="sch-row">
     <div class="label">2016.10、2017.10、2018.10</div>
     <div class="value">華中科技大学 学業優秀奨学金（一等賞、二等賞、三等賞）</div>
   </div>
