@@ -11,7 +11,7 @@ permalink: /projects/project5
 </div>
 本研究では…（此处省略）...
 
-![System Overview]({{ site.baseurl }}/images/project1.png)
+![System Overview]({{ site.baseurl }}/images/project5.svg)
 
 ### 回路図に使用した主な部品一覧
 
