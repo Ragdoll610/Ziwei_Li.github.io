@@ -10,7 +10,30 @@ permalink: /projects/project5
   1）KEA
 </div>
 
-<div class="container-wide">
+<style>
+  table.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+
+  table.custom-table th,
+  table.custom-table td {
+    border: 1px solid #ccc;
+    padding: 0.5em 1em;
+  }
+
+  table.custom-table tbody tr:nth-child(even) td:not(:first-child) {
+    background-color: #f9f9f9;
+  }
+
+  table.custom-table tbody tr:nth-child(odd) td:not(:first-child) {
+    background-color: #eeeeee;
+  }
+</style>
+
+<div class="container">
 
   <p>本研究では…（此处省略）...</p>
 
@@ -20,7 +43,7 @@ permalink: /projects/project5
 
   <h3>回路図に使用した主な部品一覧</h3>
 
-  <table>
+  <table class="custom-table">
     <thead>
       <tr>
         <th>カテゴリ</th>
