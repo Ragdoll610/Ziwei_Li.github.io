@@ -76,7 +76,7 @@ permalink: /projects
 </div>
 
 <div class="card-group">
-  <h2>智能车</h2>
+  <h2 class="section-title">智能车</h2>
   <a href="{{ site.baseurl }}/projects/project8" class="card">
     <img src="{{ site.baseurl }}/images/project1.png" alt="Project Image">
     <div class="card-content">
