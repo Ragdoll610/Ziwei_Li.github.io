@@ -52,3 +52,22 @@ permalink: /cv/
   </div>
 </div>
 
+<div class="card-group">
+  <h2>Award</h2>
+  <div class="sch-row">
+    <div class="label">2023.10 - 現在</div>
+    <div class="value">文部科学省国費外国人留学生奨学金</div>
+  </div>
+  <div class="sch-row">
+    <div class="label">2019-2021.10</div>
+    <div class="value">華中科技大学 学業優秀奨学金（一等賞、二等賞）</div>
+  </div>
+  <div class="sch-row">
+    <div class="label">2018.10</div>
+    <div class="value">中国国家奨学金(全国上位1％)</div>
+  </div>
+  <div class="sch-row">
+    <div class="label">2016-2018.10</div>
+    <div class="value">華中科技大学 学業優秀奨学金（一等賞、二等賞、三等賞）</div>
+  </div>
+</div>
