@@ -48,23 +48,7 @@ permalink: /cv/
   </div>
   <div class="edu-row">
     <div class="label">2016-2018.10</div>
-    <div class="value">華中科技大学 学業優秀奨学金（一等賞、二等賞、三等賞）</div>
-  </div>
-</div>
-
-<div class="card-group">
-  <h2>Campus activity</h2>
-  <div class="edu-row">
-    <div class="label">2023.10 - 現在</div>
-    <div class="value">文部科学省国費外国人留学生奨学金</div>
-  </div>
-  <div class="edu-row">
-    <div class="label">2019-2021.10</div>
-    <div class="value">華中科技大学 学業優秀奨学金（一等賞、二等賞）</div>
-  </div>
-  <div class="edu-row">
-    <div class="label">2018.10</div>
-    <div class="value">中国国家奨学金(全国上位1％)</div>
+    <div class="value">西南民族大学 学業優秀奨学金（一等賞、二等賞、三等賞）</div>
   </div>
 </div>
 
@@ -91,3 +75,21 @@ permalink: /cv/
     <div class="value">中国大学生スマートカー大会 西部地区 一等賞</div>
   </div>
 </div>
+
+<div class="card-group">
+  <h2>Campus activity</h2>
+  <div class="edu-row">
+    <div class="label">2019-2022</div>
+    <div class="value">華中科技大学 多スペクトル知能情報処理国家重点実験室　プロジェクトリーダー</div>
+  </div>
+  <div class="edu-row">
+    <div class="label">2017-2018</div>
+    <div class="value">西南民族大学　電子系サークル　副代表</div>
+  </div>
+  <div class="edu-row">
+    <div class="label">2016.2017</div>
+    <div class="value">西南民族大学　電子系サークル　開発部 副部長</div>
+  </div>
+</div>
+
+
