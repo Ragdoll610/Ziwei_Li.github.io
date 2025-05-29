@@ -7,3 +7,9 @@ permalink: /projects/project1
 ![System Overview]({{ site.baseurl }}/images/project1.png)
 
 本研究では…（此处省略）...
+
+
+
+![System Overview]({{ site.baseurl }}/images/project1.png)
+
+本研究では…（此处省略）...
