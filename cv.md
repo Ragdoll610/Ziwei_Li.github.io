@@ -6,7 +6,7 @@ permalink: /cv/
 
 <div class="card-group">
   <h2>Contact</h2>
-  <div class="contact-row"><div class="label">Name</div><div class="value">李自維 / ZIWEI LI</div></div>
+  <div class="contact-row"><div class="label">Name</div><div class="value">李 自維 / ZIWEI LI</div></div>
   <div class="contact-row"><div class="label">Email</div>
     <div class="value">li-ziwei06@g.ecc.u-tokyo.ac.jp</div>
   </div>
