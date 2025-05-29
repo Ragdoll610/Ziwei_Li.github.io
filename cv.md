@@ -36,7 +36,7 @@ permalink: /cv/
   <h2>Scholarship</h2>
   <div class="edu-row">
     <div class="label">2023.10 - 現在</div>
-    <div class="value">文部科学省国費外国人留学生奨学金</div>
+    <div class="value">日本政府（文部科学省）奨学金</div>
   </div>
   <div class="edu-row">
     <div class="label">2019 - 2021.10</div>
