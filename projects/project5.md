@@ -33,7 +33,7 @@ permalink: /projects/project5
   }
 </style>
 
-<div class="container">
+<div class="container-wide">
 
   <p>本研究では…（此处省略）...</p>
 
