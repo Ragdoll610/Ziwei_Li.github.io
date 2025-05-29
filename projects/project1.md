@@ -1,8 +1,9 @@
 ---
 layout: project-detail
-title: 吊り下げ搬送下の面状柔軟物に対する...
+title: 制御回路
 permalink: /projects/project1
 ---
+<h1>{{ 制御回路 }}</h1>
 
 <div class="jp-title-box">
   1）KEA
