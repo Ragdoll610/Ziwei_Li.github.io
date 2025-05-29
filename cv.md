@@ -6,7 +6,7 @@ permalink: /cv/
 
 <div class="card-group">
   <h2>Contact</h2>
-  <p><strong>Name:</strong> Masahiro Hirano<br>
+  <p style="line-height: 1.8;"><strong>Name:</strong> Masahiro Hirano<br>
      <strong>Email:</strong> hirano@example.com<br>
      <strong>Address:</strong> 東京都目黒区…</p>
 </div>
