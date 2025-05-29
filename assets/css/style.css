@@ -226,7 +226,6 @@ body {
 }
 
 /*-------table------*/
-<style>
   table.custom-table {
     width: 100%;
     border-collapse: collapse;
@@ -240,21 +239,20 @@ body {
     padding: 0.5em 1em;
   }
 
-  /* 偶数行：背景白（右侧三列） */
-  table.custom-table tbody tr:nth-child(even) td:not(:first-child) {
-    background-color: #ffffff;
-  }
-
-  /* 奇数行：背景浅灰（右侧三列） */
-  table.custom-table tbody tr:nth-child(odd) td:not(:first-child) {
+  /* 右侧交替灰底（通过 .alt 控制） */
+  table.custom-table tr.alt td:not(:first-child) {
     background-color: #f9f9f9;
   }
 
-  /* 第一列：统一白底加粗 */
+  /* 最左列固定白底 + 加粗 */
   table.custom-table td:first-child {
     background-color: #ffffff;
     font-weight: bold;
   }
-</style>
+
+  /* 第二列强制常规字体 */
+  table.custom-table td:nth-child(2) {
+    font-weight: normal;
+  }
 
 
