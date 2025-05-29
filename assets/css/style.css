@@ -152,27 +152,26 @@ body {
 /*----------cv-contact-----------*/
 .contact-row {
   display: flex;
-  align-items: flex-start;
+  align-items: baseline;  /* ✅ 核心调整在这里 */
   margin-bottom: 0.5rem;
 }
 
 .contact-row .label {
-  font-weight: bold;
   width: 120px;
-  margin-right: 2rem;
+  margin-right: 1rem;
+  font-weight: bold;
   flex-shrink: 0;
 }
 
 .contact-row .value {
   flex: 1;
-  width: 120px;
   line-height: 1.6;
 }
 
 /*--------cv-education---------*/
 .edu-row {
   display: flex;
-  align-items: flex-start;
+  align-items: baseline;
   margin-bottom: 0.5rem;
 }
 
