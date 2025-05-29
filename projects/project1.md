@@ -3,7 +3,6 @@ layout: project-detail
 title: 制御回路
 permalink: /projects/project1
 ---
-<h1>{{ 制御回路 }}</h1>
 
 <div class="jp-title-box">
   1）KEA
