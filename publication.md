@@ -1,6 +1,7 @@
 ---
 layout: default
-title: CV
+title: publication
+permalink: /publication/
 ---
 
 <div class="card-group">
