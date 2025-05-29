@@ -121,7 +121,7 @@ permalink: /cv/
       </div>
       <div>
         <div class="lang-name">Japanese</div>
-        <div class="lang-level">Daily life</div>
+        <div class="lang-level">N2</div>
       </div>
     </div>
 </div>
