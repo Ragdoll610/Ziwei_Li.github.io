@@ -213,6 +213,18 @@ body {
   font-size: 1rem;
 }
 
+/*-------project details--------*/
+.jp-title-box {
+  background-color: #f0f0f0;  /* 灰底 */
+  color: #0000cc;             /* 蓝字 */
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+
 
   width: 140px;
   line-height: 1.6;
