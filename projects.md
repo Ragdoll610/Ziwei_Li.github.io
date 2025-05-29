@@ -62,6 +62,15 @@ permalink: /projects
       <div class="detail">詳細</div>
     </div>
   </a>
+  
+　<a href="{{ site.baseurl }}/projects/project1" class="card">
+    <img src="{{ site.baseurl }}/images/project1.png" alt="Project Image">
+    <div class="card-content">
+      <h3>非接触充電</h3>
+      <div class="date">2018/6–2022</div>
+      <div class="detail">詳細</div>
+    </div>
+  </a>
 </div>
 
 <div class="card-group">
