@@ -19,55 +19,75 @@ permalink: /cv/
 <div class="card-group">
   <h2>Education</h2>
   <div class="edu-row">
-    <div class="label">&nbsp;•&nbsp;2023 - 現在</div>
+    <div class="label">2023 - 現在</div>
     <div class="value">東京大学　機械工学専攻　博士課程在学</div>
   </div>
   <div class="edu-row">
-    <div class="label">&nbsp;•&nbsp;2019 - 2022</div>
+    <div class="label">2019 - 2022</div>
     <div class="value">華中科技大学 電気・システム専攻　修士課程修了</div>
   </div>
   <div class="edu-row">
-    <div class="label">&nbsp;•&nbsp;2015 - 2019</div>
+    <div class="label">2015 - 2019</div>
     <div class="value">西南民族大学　オートメーションコース 卒業</div>
   </div>
 </div>
 
 <div class="card-group">
   <h2>Scholarship</h2>
-  <div class="sch-row">
+  <div class="edu-row">
     <div class="label">2023.10 - 現在</div>
     <div class="value">文部科学省国費外国人留学生奨学金</div>
   </div>
-  <div class="sch-row">
+  <div class="edu-row">
     <div class="label">2019-2021.10</div>
     <div class="value">華中科技大学 学業優秀奨学金（一等賞、二等賞）</div>
   </div>
-  <div class="sch-row">
+  <div class="edu-row">
     <div class="label">2018.10</div>
     <div class="value">中国国家奨学金(全国上位1％)</div>
   </div>
-  <div class="sch-row">
+  <div class="edu-row">
     <div class="label">2016-2018.10</div>
     <div class="value">華中科技大学 学業優秀奨学金（一等賞、二等賞、三等賞）</div>
   </div>
 </div>
 
 <div class="card-group">
-  <h2>Award</h2>
-  <div class="sch-row">
+  <h2>Campus activity</h2>
+  <div class="edu-row">
     <div class="label">2023.10 - 現在</div>
     <div class="value">文部科学省国費外国人留学生奨学金</div>
   </div>
-  <div class="sch-row">
+  <div class="edu-row">
     <div class="label">2019-2021.10</div>
     <div class="value">華中科技大学 学業優秀奨学金（一等賞、二等賞）</div>
   </div>
-  <div class="sch-row">
+  <div class="edu-row">
     <div class="label">2018.10</div>
     <div class="value">中国国家奨学金(全国上位1％)</div>
   </div>
-  <div class="sch-row">
+</div>
+
+<div class="card-group">
+  <h2>Award</h2>
+  <div class="edu-row">
+    <div class="label">2021.10</div>
+    <div class="value">華中科技大学社会活動貢献により表彰</div>
+  </div>
+  <div class="edu-row">
+    <div class="label">2018.08</div>
+    <div class="value">中国大学生電子設計大会 三等賞</div>
+  </div>
+  <div class="edu-row">
     <div class="label">2016-2018.10</div>
-    <div class="value">華中科技大学 学業優秀奨学金（一等賞、二等賞、三等賞）</div>
+    <div class="value">西南民族大学における優秀学生として表彰</div>
+  </div>
+  <div class="edu-row">
+    <div class="label">2016-2017.10</div>
+    <div class="value">中国国際航空機設計チャレンジ大会 三等賞</div>
+  </div>
+  <div class="edu-row">
+    <div class="label">2017-2018.08</div>
+    <div class="value">中国大学生スマートカー大会 西部地区 一等賞</div>
   </div>
 </div>
