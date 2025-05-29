@@ -176,7 +176,7 @@ body {
 }
 
 .edu-row .label {
-  font-weight: bold;
+/*  font-weight: bold;*/
   width: 140px;   /* 时间栏宽度，按你内容实际微调 */
   margin-right: 1.5rem;
   flex-shrink: 0;
