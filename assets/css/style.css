@@ -230,7 +230,7 @@ body {
   table.custom-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.9em;
+    font-size: 0.7em;
     text-align: left;
   }
 
@@ -247,16 +247,23 @@ body {
     background-color: #f2f2f2;
   }
 
-  /* 去掉 rowspan 单元格的下边框 */
+  /* 去除 rowspan 单元格下边框 */
   table.custom-table td[rowspan] {
     border-bottom: none;
   }
 
-  /* 给紧接着 rowspan 的下一行的同一列 cell 去掉上边框 */
+  /* 去除紧接 rowspan 单元格的上边框 */
   table.custom-table td.no-top-border {
     border-top: none;
   }
+
+  /* ✅ 第三列“数量”居中 */
+  table.custom-table td:nth-child(3),
+  table.custom-table th:nth-child(3) {
+    text-align: center;
+  }
 </style>
+
 
 
 
