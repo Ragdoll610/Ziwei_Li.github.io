@@ -7,7 +7,7 @@ permalink: /projects
 <h1>Project</h1>
 
 <div class="card-group">
-  <h2>回路設計</h2>
+  <h2 class="section-title">回路設計</h2>
   
   <a href="{{ site.baseurl }}/projects/project1" class="card">
     <img src="{{ site.baseurl }}/images/project1.png" alt="Project Image">
