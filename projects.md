@@ -73,7 +73,7 @@ permalink: /projects
       <div class="detail">詳細</div>
     </div>
   </a>
-
+</div>
 
 <div class="card-group">
   <h2>智能车</h2>
