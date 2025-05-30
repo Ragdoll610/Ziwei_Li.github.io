@@ -7,14 +7,14 @@ permalink: /projects/project1
 <h1>制御回路</h1>
 
 <div class="jp-title-box">
-  1）KEA
+  1）KEA128マイコン制御回路
 </div>
 
 <div style="margin-left: 1em;">
   <p><strong>📌 プロジェクト概要：</strong></p>
   <p>
-    本プロジェクトでは、DCモータを制御するための<strong>Hブリッジモータドライバ回路</strong>を回路レベルから設計・製作しました。
-    昇圧・ロジック制御・ゲート駆動・出力ステージの各ブロックを構成し、実装後はセンサを搭載した可動式プラットフォームに応用しました。
+    本プロジェクトでは、NXP製<strong> KEA128マイコン</strong>（Cortex-M0+） を中核とする制御回路を設計・製作し、三輪車型移動ロボットに搭載・応用しました。
+    モータ制御・センサ入力・信号保持・電源管理といった機能を一枚のプリント基板上に集約し、KEA128の性能を最大限に引き出す構成となっています。
   </p>
  
   <p>
@@ -27,7 +27,7 @@ permalink: /projects/project1
 </div>
   
 <div style="margin-left: 1em;">
- <h3>1. 回路図（Circuit Schematic）</h3>
+ <h3>1. KEA128 制御回路（Circuit Schematic）</h3>
   <p>本回路には、以下の主要モジュールが含まれています：</p>
   <ul>
     <li><strong>昇圧回路（Boost Converter）</strong>：MC34063により入力電圧（7.2V）を12Vに昇圧し、ドライバや出力回路に電力供給を行います。</li>
@@ -36,14 +36,24 @@ permalink: /projects/project1
     <li><strong>Hブリッジ回路（H-Bridge）</strong>：4つのMOSFETで構成されたHブリッジにより、モータの正転・逆転・制動を可能にします。</li>
   </ul>
 
-  <h3>2. 基板レイアウト（PCB Layout）</h3>
+  <h3>2. 制御基板レイアウト（PCB Layout）</h3>
   <p>設計した回路を基に、プリント基板（PCB）を設計・製作・実装しました。</p>
 
-  <h3>3. 応用例（Application）</h3>
+  <h3>3. 実装された制御基板（PCBA）</h3>
   <ul>
     <li><strong>左</strong>：電源アダプタ、制御ボード、DCモータと接続し、机上テストを実施。</li>
     <li><strong>右</strong>：センシングプラットフォームに搭載し、センサやアンプ、バッテリーと連携して動作。</li>
   </ul>
+
+    <h3>4. 三輪車への応用（Application）</h3>
+  <p>本制御基板は、三輪構成の移動ロボットに搭載され、以下の構成で動作します。</p>
+  <ul>
+    <li><strong>中央制御部</strong>：本プロジェクトで設計したKEA128制御基板。</li>
+    <li><strong>左右駆動輪</strong>：DCモータをHブリッジで駆動し、前進・後退・旋回を実現。</li>
+    <li><strong>センサ部</strong>：エンコーダおよび電感センサにより、車体の移動距離と、地面に敷設された50Hz交流信号の銅線を検出し、進行方向を判断。</li>
+    <li><strong>アンプ・バッテリ</strong>：信号整形と電力供給。</li>
+  </ul>
+  <p>全体をKEA128で統合制御し、安定した動作を実現。</p>
 </div>
   
 <div class="jp-title-box">
