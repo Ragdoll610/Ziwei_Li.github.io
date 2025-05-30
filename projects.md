@@ -28,7 +28,7 @@ permalink: /projects
   </a>
 
   <a href="{{ site.baseurl }}/projects/project3" class="card">
-    <img src="{{ site.baseurl }}/images/project3.svg" alt="Project Image">
+    <img src="{{ site.baseurl }}/images/project3_1.svg" alt="Project Image">
     <div class="card-content">
       <h3>AC-DC電源</h3>
       <div class="date">2017/4–2019</div>
