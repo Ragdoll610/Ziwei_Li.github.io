@@ -1,25 +1,26 @@
 ---
 layout: project-detail
-title: 制御回路
-permalink: /projects/project5
+title: AC-DC
+permalink: /projects/project3
 ---
 
-<h1>モータードライバ</h1>
+<h1>制御回路</h1>
 
+<p>&nbsp;</p>
 <div class="jp-title-box">
-  HブリッジDCモータードライバ
+  1）+12V / -12V / +5V Linear Regulator Module
 </div>
 
 <div style="margin-left: 1em;">
   <p><strong>📌 プロジェクト概要：</strong></p>
   <p>
-    本プロジェクトでは、DCモータを制御するための<strong>Hブリッジモータドライバ回路</strong>を回路レベルから設計・製作しました。
-    昇圧・ロジック制御・ゲート駆動・出力ステージの各ブロックを構成し、実装後はセンサを搭載した可動式プラットフォームに応用しました。
+    本プロジェクトでは、AC220V商用電源を入力とし、トランスによって低電圧に変換後、整流・平滑・三端子レギュレータを通じて安定した<strong>+12V / -12V / +5V の三出力直流電源モジュール</strong>を構成しました。
+    アナログ回路、センサ回路、マイコンボード等に幅広く利用できる汎用の電源基板です。
   </p>
  
   <p>
-    <a href="{{ site.baseurl }}/images/project5.svg" class="zoomable-image-link">
-      <img src="{{ site.baseurl }}/images/project5.svg"
+    <a href="{{ site.baseurl }}/images/project3_1.svg" class="zoomable-image-link">
+      <img src="{{ site.baseurl }}/images/project3_1.svg"
            alt="System Overview"
            style="max-width: 100%; height: auto; display: block; margin: auto; cursor: zoom-in;">
     </a>
@@ -30,51 +31,65 @@ permalink: /projects/project5
  <h3>1. 回路図（Circuit Schematic）</h3>
   <p>本回路には、以下の主要モジュールが含まれています：</p>
   <ul>
-    <li><strong>昇圧回路（Boost Converter）</strong>：MC34063により入力電圧（7.2V）を12Vに昇圧し、ドライバや出力回路に電力供給を行います。</li>
-    <li><strong>ラッチ回路（Latch）</strong>：74HC573を用いて、制御信号（PWMなど）を一時的に保持し、信号の安定化を図ります。</li>
-    <li><strong>ドライバモジュール（Gate Driver）</strong>：IR2104による上下段MOSFETのゲート駆動回路で、MOSFETの確実なスイッチングを保証します。</li>
-    <li><strong>Hブリッジ回路（H-Bridge）</strong>：4つのMOSFETで構成されたHブリッジにより、モータの正転・逆転・制動を可能にします。</li>
+    <li><strong>入力部</strong>：AC220V をトランスで降圧し、ブリッジ整流器で DC に変換。</li>
+    <li><strong>平滑部</strong>：大容量電解コンデンサ（2200μF）によってリップル低減。</li>
+    <li><strong>出力電圧生成（74HC573）</strong>：LM7812：+12V 出力、LM7805：+5V 出力、LM7912：-12V 出力。</li>
+    <li><strong>出力LED</strong>：通電状態の目視確認が可能。</li>
   </ul>
 
   <h3>2. 基板レイアウト（PCB Layout）</h3>
-  <p>設計した回路を基に、プリント基板（PCB）を設計・製作・実装しました。</p>
+  <p>トランス、整流部、出力レギュレータを熱とノイズを考慮して配置する。AC高電圧系とDC低電圧系の絶縁距離を確保する。</p>
 
-  <h3>3. 応用例（Application）</h3>
+  <h3>3. 実装写真（PCBA）</h3>
+  <p>基板実装後の外観（図2 中央左）には、以下の構成要素が確認できます：</p>
   <ul>
-    <li><strong>左</strong>：電源アダプタ、制御ボード、DCモータと接続し、机上テストを実施。</li>
-    <li><strong>右</strong>：センシングプラットフォームに搭載し、センサやアンプ、バッテリーと連携して動作。</li>
+    <li>実装済み基板はAC220V→DC三出力の電源供給が可能。</li>
+    <li>複数のモジュールと接続し、実機動作テスト済み。</li>
   </ul>
-
+</div>
 
 <p>&nbsp;</p>
-<h3>回路図に使用した主な部品一覧</h3>
+<div class="jp-title-box">
+  2）AC-DC Boost 回路 
+</div>
 
-<table class="custom-table">
-  <thead>
-    <tr>
-      <th>カテゴリ</th>
-      <th>型番 / 名称</th>
-      <th>数量</th>
-      <th>機能の説明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td rowspan="3">IC</td><td>MC34063</td><td>1</td><td>昇圧型DC-DCスイッチングレギュレータ</td></tr>
-    <tr><td>74HC573</td><td>1</td><td>8ビットラッチ、パラレル出力制御用</td></tr>
-    <tr><td>IR2104</td><td>2</td><td>ハイ・ローサイドMOSFETドライバ、Hブリッジ制御用</td></tr>
+<div style="margin-left: 1em;">
+  <p><strong>📌 プロジェクト概要：</strong></p>
+  <p>
+    本プロジェクトでは、UC28019 PWMコントローラを用いた高効率<strong>昇圧型AC-DC電源回路</strong>を設計・製作しました。
+    AC15V入力を整流・昇圧し、マイコン制御プラットフォームやセンサシステムへの安定電源を供給する用途を想定しています。
+  </p>
+ 
+  <p>
+    <a href="{{ site.baseurl }}/images/project3_2.svg" class="zoomable-image-link">
+      <img src="{{ site.baseurl }}/images/project3_2.svg"
+           alt="System Overview"
+           style="max-width: 100%; height: auto; display: block; margin: auto; cursor: zoom-in;">
+    </a>
+  </p>
+</div>
+  
+<div style="margin-left: 1em;">
+ <h3>1. 回路図（Circuit Schematic）</h3>
+  <p>本回路には、以下の主要モジュールが含まれています：</p>
+  <ul>
+    <li><strong>AC整流部</strong>：ブリッジ整流器とC14/C15による平滑回路。</li>
+    <li><strong>ブースト回路</strong>：電感（L）とMOSFET（IRF540）による昇圧構成。ダイオード（D2/D3）と大容量コンデンサ（C1: 4700μF）による出力整形。</li>
+    <li><strong>制御回路</strong>：UC28019、PWM生成、電圧・電流フィードバック制御。電流検出抵抗（R6～R8）と分圧抵抗によるフィードバック。出力GATE端子からMOSFETを駆動。</li>
+  </ul>
 
-    <tr><td>MOSFET</td><td>NチャネルMOSFET（例：IRF540N）</td><td>4</td><td>Hブリッジ構成、双方向負荷（モーターなど）制御</td></tr>
+  <h3>2. 基板レイアウト（PCB Layout）</h3>
+  <ul>
+    <li>パワー系（MOS・電感）と制御系（UCチップ）を物理的に分離</li>
+    <li>熱設計・スルーホール設計を考慮した高電流設計</li>
+    <li>入出力コンデンサ周りに十分なグランドプレーンを配置</li>
+  </ul>
 
-    <tr><td rowspan="2">ダイオード</td><td>IN5819（ショットキーダイオード）</td><td>6</td><td>整流、フリーホイール、逆電流保護</td></tr>
-    <tr><td>LED（0805）</td><td>1</td><td>電源インジケータ</td></tr>
-
-    <tr><td>抵抗</td><td>各種抵抗（例：0.22Ω、10kΩ、33Ω）</td><td>17</td><td>分圧、電流制限、電流検出など</td></tr>
-
-    <tr><td>コンデンサ</td><td>各種（例：220μF、150pF、470μF）</td><td>7</td><td>フィルタ、安定化、カップリング・デカップリング</td></tr>
-
-    <tr><td>インダクタ</td><td>330μH</td><td>1</td><td>昇圧回路のエネルギー蓄積用</td></tr>
-
-    <tr><td>コネクタ</td><td>ソケット / ピンヘッダ（SIP2）</td><td>4</td><td>電源、信号、負荷用の接続端子</td></tr>
-  </tbody>
-</table>
+  <h3>3. 実装写真（PCBA）</h3>
+  <p>実装済み基板は、三輪移動ロボットに搭載され、以下のように動作します：</p>
+  <ul>
+    <li>電感・大容量電解コン・MOSFETなどを実装。</li>
+    <li>センサ、バッテリ、モータドライバと連動し、動作を確認済み。</li>
+    <li>デバッグ時には電圧／電流波形をオシロスコープで測定可能。</li>
+  </ul>
 </div>
