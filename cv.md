@@ -4,7 +4,7 @@ title: CV
 permalink: /cv/
 ---
 
-<div class="card-group">
+<div class="card-group-1">
   <h2>Contact</h2>
   <div class="contact-row"><div class="label">Name</div><div class="value">李 自維 / ZIWEI LI</div></div>
   <div class="contact-row"><div class="label">Email</div>
@@ -16,7 +16,7 @@ permalink: /cv/
   <div class="contact-row"><div class="label">Phone</div><div class="value">070-2320-0610</div></div>
 </div>
 
-<div class="card-group">
+<div class="card-group-1">
   <h2>Education</h2>
   <div class="edu-row">
     <div class="label">2023 - 現在</div>
@@ -32,7 +32,7 @@ permalink: /cv/
   </div>
 </div>
 
-<div class="card-group">
+<div class="card-group-1">
   <h2>Scholarship</h2>
   <div class="edu-row">
     <div class="label">2023.10 - 現在</div>
@@ -52,7 +52,7 @@ permalink: /cv/
   </div>
 </div>
 
-<div class="card-group">
+<div class="card-group-1">
   <h2>Award</h2>
   <div class="edu-row">
     <div class="label">2021.10</div>
@@ -76,7 +76,7 @@ permalink: /cv/
   </div>
 </div>
 
-<div class="card-group">
+<div class="card-group-1">
   <h2>Campus activity</h2>
   <div class="edu-row">
     <div class="label">2019 - 2022</div>
@@ -92,7 +92,7 @@ permalink: /cv/
   </div>
 </div>
 
-<div class="card-group">
+<div class="card-group-1">
     <h2>Language</h2>
     <div class="language-grid">
       <div>
