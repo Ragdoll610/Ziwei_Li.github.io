@@ -31,8 +31,9 @@ permalink: /projects/project4
 </div>
   
 <div style="margin-left: 1em;">
+ <p>&nbsp;</p>
  <p><strong>モジュール①：EG8030制御モジュール（EG8030 Control Module）：</strong></p>
- <p><strong>主な役割</strong>：三相正弦波PWM信号の生成、電流検出・保護信号の受信、外部ゲートドライバを介したMOSFET出力段の制御。</p>
+ <p>三相正弦波PWM信号の生成、電流検出・保護信号の受信、外部ゲートドライバを介したMOSFET出力段の制御。</p>
  <p><strong>構成要素</strong>
   <ul>
     <li><strong>インバータ制御IC EG8030</strong>：AHO/BHO/CHOなどのPWM信号を出力し、ゲートドライバを介して出力段MOSFETを制御します。</li>
@@ -42,22 +43,16 @@ permalink: /projects/project4
   </ul>
 </div>
 
-<p>&nbsp;</p>
-<div class="jp-title-box">
-  2）Boost回路
-</div>
 <div style="margin-left: 1em;">
+  <p>&nbsp;</p>
   <p><strong>モジュール②：MOSFETベースインバータ出力ステージ：</strong></p>
-  <p><strong>主な役割</strong>：PWM制御信号を用いてMOSFETを駆動し、DC入力をAC波形へ変換。</p>
-</div>
-  
-<div style="margin-left: 1em;">
- <h3>機能説明</h3>
+  <p>PWM制御信号を用いてMOSFETを駆動し、DC入力をAC波形へ変換。</p>
+  <p><strong>構成要素</strong>
   <ul>
-    <li><strong>2Vへの昇圧出力</strong>：MC34063と外付けインダクタ、ショットキーダイオード、フィードバック回路により構成される昇圧型DC-DC回路。</li>
-    <li><strong>出力電圧調整可能</strong>：抵抗分圧により必要な出力電圧を設定可能で、接続先の負荷に応じた調整が可能。</li>
-    <li><strong>過電流保護と平滑回路</strong>：入力側にサンプリング抵抗と大容量コンデンサを設け、突入電流やリップルを抑制し、安定動作を確保。</li>
-    <li><strong>小型・高効率</strong>：コンパクト設計で、キャパシタ放電系やポータブル電源システムなどへの組み込みに最適。</li>
+    <li><strong>MOSFET半橋構成（AHO/BHO/CHO）</strong>：各出力チャネルに対応した高効率スイッチング回路。</li>
+    <li><strong>ゲートドライバ＆保護ダイオード</strong>：MOSFETの高速駆動と逆電流保護。</li>
+    <li><strong>LCフィルタ（インダクタ＋コンデンサ）</strong>：高周波成分の除去と滑らかなAC出力の実現。</li>
+    <li><strong>電源入力部（+36V）</strong>：大容量電解コンデンサによるリップル除去。</li>
   </ul>
 
   <p>&nbsp;</p>
