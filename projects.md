@@ -56,7 +56,7 @@ permalink: /projects
   </a>
   
   <a href="{{ site.baseurl }}/projects/project6" class="card">
-    <img src="{{ site.baseurl }}/images/project1.png" alt="Project Image">
+    <img src="{{ site.baseurl }}/images/project6_3.svg" alt="Project Image">
     <div class="card-content">
       <h3>アナログ回路</h3>
       <div class="date">2017/4–2019</div>
@@ -66,7 +66,7 @@ permalink: /projects
 
   
   <a href="{{ site.baseurl }}/projects/project7" class="card">
-    <img src="{{ site.baseurl }}/images/project1.png" alt="Project Image">
+    <img src="{{ site.baseurl }}/images/project7.svg" alt="Project Image">
     <div class="card-content">
       <h3>非接触充電</h3>
       <div class="date">2017/4–2019</div>
