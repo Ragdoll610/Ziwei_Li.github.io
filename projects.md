@@ -10,7 +10,7 @@ permalink: /projects
   <h2 class="section-title">回路設計</h2>
   
   <a href="{{ site.baseurl }}/projects/project1" class="card">
-    <img src="{{ site.baseurl }}/images/project1.png" alt="Project Image">
+    <img src="{{ site.baseurl }}/images/project1_1.svg" alt="Project Image">
     <div class="card-content">
       <h3>制御回路</h3>
       <div class="date">2017/4–2019</div>
