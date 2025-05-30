@@ -18,24 +18,27 @@ permalink: /projects/project4
 
 <p>&nbsp;</p>
 <div class="jp-title-box">
-  1）Buck回路
+  DC-ACインバータ回路
 </div>
 
 <div style="margin-left: 1em;">
   <p><strong>📌 プロジェクト概要：</strong></p>
   <p>
-    本モジュールは、12Vの直流入力電圧を複数の安定した出力電圧に変換するための<strong>降圧電源</strong>です。
-    リニアレギュレータと可変出力回路を組み合わせることで、システム内の各サブモジュールに適切な電圧を供給します。
+    本プロジェクトは、インバータ制御IC「EG8030」を用いた<strong>DC-ACインバータ回路</strong>の設計・製作を目的としています。
+    本回路は、EG8030を中心とする制御回路と、MOSFETを用いたインバータ出力段によって構成され、直流電源（例：+36V）を交流波形に変換する機能を実現します。
+    システムは主に以下の2つのモジュールで構成されています。
   </p>
 </div>
   
 <div style="margin-left: 1em;">
- <h3>機能説明</h3>
+ <p><strong>モジュール①：EG8030制御モジュール（EG8030 Control Module）：</strong></p>
+ <p><strong>主な役割</strong>：三相正弦波PWM信号の生成、電流検出・保護信号の受信、外部ゲートドライバを介したMOSFET出力段の制御。</p>
+ <p><strong>構成要素</strong>
   <ul>
-    <li><strong>5V安定出力（2系統）</strong>：低ドロップアウト型のLM2940を使用し、2系統の5V電源（VCC-5V1およびVCC-5V2）を提供。MCU、センサ、ロジック回路などへの電源供給に使用。</li>
-    <li><strong>7〜11V可変出力</strong>：可変レギュレータ（例：LM317）により抵抗で出力電圧を設定可能。リレーやモータ駆動用など電圧要求のある負荷に対応。</li>
-    <li><strong>電源制御</strong>：物理スイッチによってシステム全体の電源を制御。LEDにより通電状態を視覚的に表示。</li>
-    <li><strong>フィルタ設計</strong>：出力ごとに電解コンデンサとセラミックコンデンサを組み合わせ、ノイズ除去と電圧の安定性を確保。</li>
+    <li><strong>インバータ制御IC EG8030</strong>：AHO/BHO/CHOなどのPWM信号を出力し、ゲートドライバを介して出力段MOSFETを制御します。</li>
+    <li><strong>電流検出・保護回路</strong>：オペアンプにより電流をセンシングし、EG8030の保護端子にフィードバックします。</li>
+    <li><strong>発振回路</strong>：安定した動作クロックを提供するための水晶発振子。</li>
+    <li><strong>電源回路</strong>：+5Vおよび+12V供給用のレギュレータおよびデカップリングコンデンサで構成されています。</li>
   </ul>
 </div>
 
@@ -44,11 +47,8 @@ permalink: /projects/project4
   2）Boost回路
 </div>
 <div style="margin-left: 1em;">
-  <p><strong>📌 プロジェクト概要：</strong></p>
-  <p>
-    本モジュールは、MC34063昇圧ICをベースとした設計で、7.2Vの入力電圧を12Vに<strong>昇圧する電源回路</strong>です。
-    スーパーキャパシタやバッテリーなど低電圧電源から高電圧を安定供給する用途に適しています。
-  </p>
+  <p><strong>モジュール②：MOSFETベースインバータ出力ステージ：</strong></p>
+  <p><strong>主な役割</strong>：PWM制御信号を用いてMOSFETを駆動し、DC入力をAC波形へ変換。</p>
 </div>
   
 <div style="margin-left: 1em;">
@@ -61,5 +61,8 @@ permalink: /projects/project4
   </ul>
 
   <p>&nbsp;</p>
-  <p>※&nbsp;BuckおよびBoost回路は制御回路やAC-DC電源の一部として使われることが多いため、本モジュール単体のPCBは製作していません</p>
+  <p>
+    ※&nbsp;画像上部は制御モジュールの回路図およびPCB設計を、下部はパワー変換ステージの回路図および対応するPCBを示しています。
+    両者は信号コネクタを介して接続され、協調的にDC-AC変換を実現します。
+  </p>
 </div>
