@@ -13,7 +13,7 @@ permalink: /projects
     <img src="{{ site.baseurl }}/images/project1_1.svg" alt="Project Image">
     <div class="card-content">
       <h3>制御回路</h3>
-      <div class="date">2017/4–2019</div>
+      <div class="date">2017/04–2018/09</div>
       <div class="detail">詳細</div>
     </div>
   </a>
@@ -22,7 +22,7 @@ permalink: /projects
     <img src="{{ site.baseurl }}/images/project2.svg" alt="Project Image">
     <div class="card-content">
       <h3>DC-DC電源</h3>
-      <div class="date">2017/4–2019</div>
+      <div class="date">2016/04–2017/06</div>
       <div class="detail">詳細</div>
     </div>
   </a>
@@ -31,7 +31,7 @@ permalink: /projects
     <img src="{{ site.baseurl }}/images/project3_1.svg" alt="Project Image">
     <div class="card-content">
       <h3>AC-DC電源</h3>
-      <div class="date">2017/4–2019</div>
+      <div class="date">2017/09–2018/09</div>
       <div class="detail">詳細</div>
     </div>
   </a>
@@ -40,7 +40,7 @@ permalink: /projects
     <img src="{{ site.baseurl }}/images/project4.svg" alt="Project Image">
     <div class="card-content">
       <h3>DC-AC電源</h3>
-      <div class="date">2017/4–2019</div>
+      <div class="date">2018/04–2018/11</div>
       <div class="detail">詳細</div>
     </div>
   </a>
@@ -50,7 +50,7 @@ permalink: /projects
     <img src="{{ site.baseurl }}/images/project5.svg" alt="Project Image">
     <div class="card-content">
       <h3>モータードライバ</h3>
-      <div class="date">2017/4–2019</div>
+      <div class="date">2016/12–2018/09</div>
       <div class="detail">詳細</div>
     </div>
   </a>
@@ -59,7 +59,7 @@ permalink: /projects
     <img src="{{ site.baseurl }}/images/project6_3.svg" alt="Project Image">
     <div class="card-content">
       <h3>アナログ回路</h3>
-      <div class="date">2017/4–2019</div>
+      <div class="date">2017/01–2018/06</div>
       <div class="detail">詳細</div>
     </div>
   </a>
@@ -69,7 +69,7 @@ permalink: /projects
     <img src="{{ site.baseurl }}/images/project7.svg" alt="Project Image">
     <div class="card-content">
       <h3>非接触充電</h3>
-      <div class="date">2017/4–2019</div>
+      <div class="date">2017/12–2018/09</div>
       <div class="detail">詳細</div>
     </div>
   </a>
@@ -78,28 +78,28 @@ permalink: /projects
 <div class="card-group">
   <h2 class="section-title">知能移動システム</h2>
   <a href="{{ site.baseurl }}/projects/project8" class="card">
-    <img src="{{ site.baseurl }}/images/project1.png" alt="Project Image">
+    <img src="{{ site.baseurl }}/images/project8.svg" alt="Project Image">
     <div class="card-content">
       <h3>三輪車</h3>
-      <div class="date">2017/4–2019</div>
+      <div class="date">2017/01–2018/09</div>
       <div class="detail">詳細</div>
     </div>
   </a>
 
-    <a href="{{ site.baseurl }}/projects/project8" class="card">
-    <img src="{{ site.baseurl }}/images/project1.png" alt="Project Image">
+    <a href="{{ site.baseurl }}/projects/project9" class="card">
+    <img src="{{ site.baseurl }}/images/project9.svg" alt="Project Image">
     <div class="card-content">
       <h3>三輪車</h3>
-      <div class="date">2017/4–2019</div>
+      <div class="date">2016/04–2017/06</div>
       <div class="detail">詳細</div>
     </div>
   </a>
 
-    <a href="{{ site.baseurl }}/projects/project8" class="card">
-    <img src="{{ site.baseurl }}/images/project1.png" alt="Project Image">
+    <a href="{{ site.baseurl }}/projects/project10" class="card">
+    <img src="{{ site.baseurl }}/images/project10.svg" alt="Project Image">
     <div class="card-content">
-      <h3>三輪車</h3>
-      <div class="date">2017/4–2019</div>
+      <h3>FPV模型飛行機</h3>
+      <div class="date">2015/12–2018/09</div>
       <div class="detail">詳細</div>
     </div>
   </a>
