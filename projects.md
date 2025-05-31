@@ -76,8 +76,26 @@ permalink: /projects
 </div>
 
 <div class="card-group">
-  <h2 class="section-title">智能车</h2>
+  <h2 class="section-title">知能移動システム</h2>
   <a href="{{ site.baseurl }}/projects/project8" class="card">
+    <img src="{{ site.baseurl }}/images/project1.png" alt="Project Image">
+    <div class="card-content">
+      <h3>三輪車</h3>
+      <div class="date">2017/4–2019</div>
+      <div class="detail">詳細</div>
+    </div>
+  </a>
+
+    <a href="{{ site.baseurl }}/projects/project8" class="card">
+    <img src="{{ site.baseurl }}/images/project1.png" alt="Project Image">
+    <div class="card-content">
+      <h3>三輪車</h3>
+      <div class="date">2017/4–2019</div>
+      <div class="detail">詳細</div>
+    </div>
+  </a>
+
+    <a href="{{ site.baseurl }}/projects/project8" class="card">
     <img src="{{ site.baseurl }}/images/project1.png" alt="Project Image">
     <div class="card-content">
       <h3>三輪車</h3>
