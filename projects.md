@@ -87,7 +87,7 @@ permalink: /projects
   </a>
 
     <a href="{{ site.baseurl }}/projects/project9" class="card">
-    <img src="{{ site.baseurl }}/images/project9.svg" alt="Project Image">
+    <img src="{{ site.baseurl }}/images/project7.svg" alt="Project Image">
     <div class="card-content">
       <h3>光電ライントレースカー、自立二輪ロボットカー</h3>
       <div class="date">2016/04–2017/06</div>
