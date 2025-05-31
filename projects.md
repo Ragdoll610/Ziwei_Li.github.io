@@ -103,4 +103,25 @@ permalink: /projects
       <div class="detail">詳細</div>
     </div>
   </a>
+
+    <a href="{{ site.baseurl }}/projects/project10" class="card">
+    <img src="{{ site.baseurl }}/images/project10.svg" alt="Project Image">
+    <div class="card-content">
+      <h3>水温制御装置</h3>
+      <div class="date">2018/03–2018/07</div>
+      <div class="detail">詳細</div>
+    </div>
+  </a>
+</div>
+
+<div class="card-group">
+  <h2 class="section-title">その他</h2>
+    <a href="{{ site.baseurl }}/projects/project10" class="card">
+    <img src="{{ site.baseurl }}/images/project10.svg" alt="Project Image">
+    <div class="card-content">
+      <h3>水温制御装置</h3>
+      <div class="date">2018/03–2018/07</div>
+      <div class="detail">詳細</div>
+    </div>
+  </a>
 </div>
