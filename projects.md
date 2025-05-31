@@ -80,7 +80,7 @@ permalink: /projects
   <a href="{{ site.baseurl }}/projects/project8" class="card">
     <img src="{{ site.baseurl }}/images/project8.svg" alt="Project Image">
     <div class="card-content">
-      <h3>三輪車</h3>
+      <h3>三輪電磁ライントレースカー</h3>
       <div class="date">2017/01–2018/09</div>
       <div class="detail">詳細</div>
     </div>
@@ -89,7 +89,7 @@ permalink: /projects
     <a href="{{ site.baseurl }}/projects/project9" class="card">
     <img src="{{ site.baseurl }}/images/project9.svg" alt="Project Image">
     <div class="card-content">
-      <h3>三輪車</h3>
+      <h3>光電ライントレースカー、自立二輪ロボットカー</h3>
       <div class="date">2016/04–2017/06</div>
       <div class="detail">詳細</div>
     </div>
