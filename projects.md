@@ -78,7 +78,7 @@ permalink: /projects
 <div class="card-group">
   <h2 class="section-title">知能移動システム</h2>
   <a href="{{ site.baseurl }}/projects/project8" class="card">
-    <img src="{{ site.baseurl }}/images/project8.svg" alt="Project Image">
+    <img src="{{ site.baseurl }}/images/project7.svg" alt="Project Image">
     <div class="card-content">
       <h3>三輪電磁スマートカー</h3>
       <div class="date">2017/01–2018/09</div>
