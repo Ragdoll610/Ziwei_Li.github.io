@@ -1,80 +1,64 @@
 ---
 layout: project-detail
-title: 制御回路
-permalink: /projects/project5
+title: ロボットカー
+permalink: /projects/project2
 ---
 
-<h1>モータードライバ</h1>
-
-<div class="jp-title-box">
-  HブリッジDCモータードライバ
-</div>
-
+<h1>ロボットカー</h1>
 <div style="margin-left: 1em;">
-  <p><strong>📌 プロジェクト概要：</strong></p>
   <p>
-    本プロジェクトでは、DCモータを制御するための<strong>Hブリッジモータドライバ回路</strong>を回路レベルから設計・製作しました。
-    昇圧・ロジック制御・ゲート駆動・出力ステージの各ブロックを構成し、実装後はセンサを搭載した可動式プラットフォームに応用しました。
-  </p>
- 
-  <p>
-    <a href="{{ site.baseurl }}/images/project5.svg" class="zoomable-image-link">
-      <img src="{{ site.baseurl }}/images/project5.svg"
+    <a href="{{ site.baseurl }}/images/project9.svg" class="zoomable-image-link">
+      <img src="{{ site.baseurl }}/images/project9.svg"
            alt="System Overview"
            style="max-width: 100%; height: auto; display: block; margin: auto; cursor: zoom-in;">
     </a>
   </p>
 </div>
-  
-<div style="margin-left: 1em;">
- <h3>1. 回路図（Circuit Schematic）</h3>
-  <p>本回路には、以下の主要モジュールが含まれています：</p>
-  <ul>
-    <li><strong>昇圧回路（Boost Converter）</strong>：MC34063により入力電圧（7.2V）を12Vに昇圧し、ドライバや出力回路に電力供給を行います。</li>
-    <li><strong>ラッチ回路（Latch）</strong>：74HC573を用いて、制御信号（PWMなど）を一時的に保持し、信号の安定化を図ります。</li>
-    <li><strong>ドライバモジュール（Gate Driver）</strong>：IR2104による上下段MOSFETのゲート駆動回路で、MOSFETの確実なスイッチングを保証します。</li>
-    <li><strong>Hブリッジ回路（H-Bridge）</strong>：4つのMOSFETで構成されたHブリッジにより、モータの正転・逆転・制動を可能にします。</li>
-  </ul>
-
-  <h3>2. 基板レイアウト（PCB Layout）</h3>
-  <p>設計した回路を基に、プリント基板（PCB）を設計・製作・実装しました。</p>
-
-  <h3>3. 応用例（Application）</h3>
-  <ul>
-    <li><strong>左</strong>：電源アダプタ、制御ボード、DCモータと接続し、机上テストを実施。</li>
-    <li><strong>右</strong>：センシングプラットフォームに搭載し、センサやアンプ、バッテリーと連携して動作。</li>
-  </ul>
-
 
 <p>&nbsp;</p>
-<h3>回路図に使用した主な部品一覧</h3>
+<div class="jp-title-box">
+  1）Buck回路
+</div>
 
-<table class="custom-table">
-  <thead>
-    <tr>
-      <th>カテゴリ</th>
-      <th>型番 / 名称</th>
-      <th>数量</th>
-      <th>機能の説明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td rowspan="3">IC</td><td>MC34063</td><td>1</td><td>昇圧型DC-DCスイッチングレギュレータ</td></tr>
-    <tr><td>74HC573</td><td>1</td><td>8ビットラッチ、パラレル出力制御用</td></tr>
-    <tr><td>IR2104</td><td>2</td><td>ハイ・ローサイドMOSFETドライバ、Hブリッジ制御用</td></tr>
+<div style="margin-left: 1em;">
+  <h3>📌 プロジェクト概要：</h3>
+  <p>
+    本モジュールは、12Vの直流入力電圧を複数の安定した出力電圧に変換するための<strong>降圧電源</strong>です。
+    リニアレギュレータと可変出力回路を組み合わせることで、システム内の各サブモジュールに適切な電圧を供給します。
+  </p>
+</div>
+  
+<div style="margin-left: 1em;">
+ <p><strong>機能説明</strong>  
+  <ul>
+    <li><strong>5V安定出力（2系統）</strong>：低ドロップアウト型のLM2940を使用し、2系統の5V電源（VCC-5V1およびVCC-5V2）を提供。MCU、センサ、ロジック回路などへの電源供給に使用。</li>
+    <li><strong>7〜11V可変出力</strong>：可変レギュレータ（例：LM317）により抵抗で出力電圧を設定可能。リレーやモータ駆動用など電圧要求のある負荷に対応。</li>
+    <li><strong>電源制御</strong>：物理スイッチによってシステム全体の電源を制御。LEDにより通電状態を視覚的に表示。</li>
+    <li><strong>フィルタ設計</strong>：出力ごとに電解コンデンサとセラミックコンデンサを組み合わせ、ノイズ除去と電圧の安定性を確保。</li>
+  </ul>
+</div>
 
-    <tr><td>MOSFET</td><td>NチャネルMOSFET（例：IRF540N）</td><td>4</td><td>Hブリッジ構成、双方向負荷（モーターなど）制御</td></tr>
+<p>&nbsp;</p>
+<div class="jp-title-box">
+  2）Boost回路
+</div>
+<div style="margin-left: 1em;">
+  <h3>📌 プロジェクト概要：</h3>
+  <p>
+    本モジュールは、MC34063昇圧ICをベースとした設計で、7.2Vの入力電圧を12Vに<strong>昇圧する電源回路</strong>です。
+    スーパーキャパシタやバッテリーなど低電圧電源から高電圧を安定供給する用途に適しています。
+  </p>
+</div>
+  
+<div style="margin-left: 1em;">
+ <p><strong>機能説明</strong>
+  <ul>
+    <li><strong>2Vへの昇圧出力</strong>：MC34063と外付けインダクタ、ショットキーダイオード、フィードバック回路により構成される昇圧型DC-DC回路。</li>
+    <li><strong>出力電圧調整可能</strong>：抵抗分圧により必要な出力電圧を設定可能で、接続先の負荷に応じた調整が可能。</li>
+    <li><strong>過電流保護と平滑回路</strong>：入力側にサンプリング抵抗と大容量コンデンサを設け、突入電流やリップルを抑制し、安定動作を確保。</li>
+    <li><strong>小型・高効率</strong>：コンパクト設計で、キャパシタ放電系やポータブル電源システムなどへの組み込みに最適。</li>
+  </ul>
 
-    <tr><td rowspan="2">ダイオード</td><td>IN5819（ショットキーダイオード）</td><td>6</td><td>整流、フリーホイール、逆電流保護</td></tr>
-    <tr><td>LED（0805）</td><td>1</td><td>電源インジケータ</td></tr>
-
-    <tr><td>抵抗</td><td>各種抵抗（例：0.22Ω、10kΩ、33Ω）</td><td>17</td><td>分圧、電流制限、電流検出など</td></tr>
-
-    <tr><td>コンデンサ</td><td>各種（例：220μF、150pF、470μF）</td><td>7</td><td>フィルタ、安定化、カップリング・デカップリング</td></tr>
-
-    <tr><td>インダクタ</td><td>330μH</td><td>1</td><td>昇圧回路のエネルギー蓄積用</td></tr>
-
-    <tr><td>コネクタ</td><td>ソケット / ピンヘッダ（SIP2）</td><td>4</td><td>電源、信号、負荷用の接続端子</td></tr>
-  </tbody>
-</table>
+  <p>&nbsp;</p>
+  <p>※&nbsp;BuckおよびBoost回路は制御回路やAC-DC電源の一部として使われることが多いため、本モジュール単体のPCBは製作していません</p>
 </div>
