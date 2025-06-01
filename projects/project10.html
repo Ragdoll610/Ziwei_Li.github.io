@@ -73,16 +73,15 @@ permalink: /projects/project10
   <p><strong>モジュール③：FPVシステム（FPV System）</strong></p>
   <p>機体視点の映像を同時に2箇所へ送信し、操縦者と観測者の双方がリアルタイムで飛行状況を把握可能。</p>
   <ul>
-    <p><strong>モジュール③：FPVシステム（FPV System）：</strong></p>
-    <li><strong>センサデータ取得部（Sensor Data Acquisition）</strong>：誘導センサのアナログ信号を連続的に読み取り、デジタル信号に変換。
-      センサ値の分布パターンから中心線とのずれを検出。</li>
-    <li><strong>ファジィロジック制御器（Fuzzy Logic Controller）</strong>：センサパターンを解析し、進路からの偏差量を推定。
-      PID制御に渡すためのエラー信号を出力。</li>
-    <li><strong>PID制御器（PID Motor Control）</strong>：ファジィ制御器の出力（進路エラー）とエンコーダの速度データを入力として受け取る。
-      左右のモーターに対し個別にPWM値と回転方向を計算し、差速で旋回制御を行う。
-      安定した走行速度とスムーズな方向転換を実現。</li>
-    <li><strong>エンコーダフィードバック（Encoder Feedback）</strong>：モーターの回転数を測定し、PID制御にリアルタイムな速度情報を提供。
-      走行中の安定性を維持し、加速や減速の誤差を最小化。</li>
+    <p><strong>✈ 空中側</strong>：</p>
+    <li><strong>Camera</strong>：機体前部に搭載されたカメラが機体前方の映像をリアルタイムで撮影。</li>
+    <li><strong>Dual FPV TX（5.8GHz）</strong>：撮影された映像を2系統の送信機により無線で地上へ送信。</li>
+  </ul>
+  <ul>
+    <p><strong>📺 地上側</strong>：</p>
+    <li><strong>FPV RX + FPV Monitor</strong>：FPV用ディスプレイがリアルタイムで映像を表示。FCからのOSD（On-Screen Display）情報により、高度・速度・バッテリー電圧などのテレメトリ情報も同時に表示可能。</li>
+    <li><strong>監視用モニター</strong>：もう一つの5.8GHz受信機で同じ映像を受信し、操作支援者や観測者が第三者視点で状況を確認できる。</li>
+    <li><strong>Radio Transmitter（プロポ／2.4GHz）</strong>：操縦者がスロットル、エレベーター、ラダーなどを操作する2.4GHz送信機で、機体をフルマニュアル制御。</li>
   </ul>
   
 </div>
