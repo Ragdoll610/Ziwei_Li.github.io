@@ -1,25 +1,87 @@
 ---
 layout: project-detail
-title: 制御回路
-permalink: /projects/project5
+title: シミュレーショ
+permalink: /projects/project13
 ---
 
-<h1>モータードライバ</h1>
+<h1>制御システム</h1>
 
+<p>&nbsp;</p>
 <div class="jp-title-box">
-  HブリッジDCモータードライバ
+  1）ボイラーの温度－流量カスケード制御システム
 </div>
 
 <div style="margin-left: 1em;">
-  <p><strong>📌 プロジェクト概要：</strong></p>
+  <h3>📌 プロジェクト概要：</h3>
   <p>
-    本プロジェクトでは、DCモータを制御するための<strong>Hブリッジモータドライバ回路</strong>を回路レベルから設計・製作しました。
-    昇圧・ロジック制御・ゲート駆動・出力ステージの各ブロックを構成し、実装後はセンサを搭載した可動式プラットフォームに応用しました。
+    本プロジェクトでは、NXP製<strong> KEA128マイコン</strong>（Cortex-M0+） を中核とする制御回路を設計・製作し、三輪車型移動ロボットに搭載・応用しました。
+    モータ制御・センサ入力・信号保持・電源管理といった機能を一枚のプリント基板上に集約し、KEA128の性能を最大限に引き出す構成となっています。
   </p>
  
   <p>
-    <a href="{{ site.baseurl }}/images/project5.svg" class="zoomable-image-link">
-      <img src="{{ site.baseurl }}/images/project5.svg"
+    <a href="{{ site.baseurl }}/images/project1_1.svg" class="zoomable-image-link">
+      <img src="{{ site.baseurl }}/images/project1_1.svg"
+           alt="System Overview"
+           style="max-width: 80%; height: auto; display: block; margin: auto; cursor: zoom-in;">
+    </a>
+  </p>
+</div>
+  
+<div style="margin-left: 1em;">
+ <h3>1. KEA128 制御回路（Circuit Schematic）</h3>
+  <p>本回路は KEA128 マイコンを中心に設計され、以下の機能ブロックを統合しています：</p>
+  <ul>
+    <li><strong>電源ブロック（MC34063）</strong>：7.2V 入力を 12V に昇圧し、モータ駆動部などに安定供給。</li>
+    <li><strong>マイコン本体（KEA128）</strong>：PWM出力、ADC、GPIO、割り込み処理を担う本システムの頭脳。</li>
+    <li><strong>ラッチ回路（74HC573）</strong>：信号の一時保持により安定動作を支援。</li>
+    <li><strong>Hブリッジ + ドライバ回路（IR2104 + MOSFET）</strong>：DCモータの正転・逆転制御。</li>
+    <li><strong>アナログ入力系</strong>：外部センサの電圧信号をADCで読み取るインタフェース。</li>
+  </ul>
+
+  <h3>2. 制御基板レイアウト（PCB Layout）</h3>
+  <p>本制御回路は、KEA128マイコンの周辺回路を含む専用制御基板として設計されています。</p>
+  <strong>基板設計の特徴</strong>：
+  <ul>
+    <li>電源系、制御系、出力系を明確に分離し、ノイズ耐性と保守性を確保。</li>
+    <li>KEA128を中心に信号線を放射状にレイアウトし、応答性を最適化。</li>
+    <li>DIPスイッチ、ボタン、端子台を搭載し、各種モード切替や接続が可能。</li>
+  </ul>
+
+  <h3>3. 実装された制御基板（PCBA）</h3>
+  <p>基板実装後の外観には、以下の構成要素が確認できます：</p>
+  <ul>
+    <li><strong>KEA128本体</strong>：基板中央に実装。</li>
+    <li><strong>スイッチ群</strong>：手動入力や設定切替用（K2〜K4、DIP SWなど）。</li>
+    <li><strong>パワー回路・ドライバIC</strong>：基板上部に配置し、放熱・信号分離に配慮。</li>
+    <li><strong>各種コネクタ</strong>：三輪車のモータ・センサ・電源とのインタフェース。</li>
+  </ul>
+
+    <h3>4. 三輪車への応用（Application）</h3>
+  <p>本制御基板は、三輪構成の移動ロボットに搭載され、以下の構成で動作します。</p>
+  <ul>
+    <li><strong>中央制御部</strong>：本プロジェクトで設計したKEA128制御基板。</li>
+    <li><strong>左右駆動輪</strong>：DCモータをHブリッジで駆動し、前進・後退・旋回を実現。</li>
+    <li><strong>センサ部</strong>：エンコーダおよび電感センサにより、車体の移動距離と、地面に敷設された50Hz交流信号の銅線を検出し、進行方向を判断。</li>
+    <li><strong>アンプ・バッテリ</strong>：信号整形と電力供給。</li>
+  </ul>
+  <p>全体をKEA128で統合制御し、安定した動作を実現。</p>
+</div>
+
+<p>&nbsp;</p>
+<div class="jp-title-box">
+  2）STC89C52マイコン制御回路
+</div>
+
+<div style="margin-left: 1em;">
+  <h3>📌 プロジェクト概要：</h3>
+  <p>
+    本プロジェクトでは、<strong>STC89C52</strong>（8051系8ビットマイコン） を搭載した制御基板を設計・製作し、三輪ロボットに応用しました。
+    本基板は、モータ制御・センサ入力・電源供給といった基本機能を1枚に統合し、ロボットの自律走行を実現します。
+  </p>
+ 
+  <p>
+    <a href="{{ site.baseurl }}/images/project1_2.svg" class="zoomable-image-link">
+      <img src="{{ site.baseurl }}/images/project1_2.svg"
            alt="System Overview"
            style="max-width: 100%; height: auto; display: block; margin: auto; cursor: zoom-in;">
     </a>
@@ -30,51 +92,24 @@ permalink: /projects/project5
  <h3>1. 回路図（Circuit Schematic）</h3>
   <p>本回路には、以下の主要モジュールが含まれています：</p>
   <ul>
-    <li><strong>昇圧回路（Boost Converter）</strong>：MC34063により入力電圧（7.2V）を12Vに昇圧し、ドライバや出力回路に電力供給を行います。</li>
-    <li><strong>ラッチ回路（Latch）</strong>：74HC573を用いて、制御信号（PWMなど）を一時的に保持し、信号の安定化を図ります。</li>
-    <li><strong>ドライバモジュール（Gate Driver）</strong>：IR2104による上下段MOSFETのゲート駆動回路で、MOSFETの確実なスイッチングを保証します。</li>
-    <li><strong>Hブリッジ回路（H-Bridge）</strong>：4つのMOSFETで構成されたHブリッジにより、モータの正転・逆転・制動を可能にします。</li>
+    <li><strong>STC89C52最小システム</strong>：リセット回路、クロック回路、基本I/O接続を含む。</li>
+    <li><strong>光電センサ入力</strong>：地面の黒線を検出するフォトセンサ（反射型）を複数搭載。</li>
+    <li><strong>モータドライバ（Gate Driver）</strong>：L298NによるDCモータの駆動制御。</li>
+    <li><strong>電源回路</strong>：外部からの電源を安定化し、5Vで各回路に供給。</li>
   </ul>
 
   <h3>2. 基板レイアウト（PCB Layout）</h3>
-  <p>設計した回路を基に、プリント基板（PCB）を設計・製作・実装しました。</p>
+  <p>
+    本基板は、STC89C52を中心に、モータドライバIC、センサ端子、スイッチ、電源系を効率的に配置した一体型制御基板です。
+    シンプルな2層設計により、配線が明確で、組立とデバッグが容易。
+  </p>
 
   <h3>3. 応用例（Application）</h3>
+  <p>実装済み基板は、三輪移動ロボットに搭載され、以下のように動作します：</p>
   <ul>
-    <li><strong>左</strong>：電源アダプタ、制御ボード、DCモータと接続し、机上テストを実施。</li>
-    <li><strong>右</strong>：センシングプラットフォームに搭載し、センサやアンプ、バッテリーと連携して動作。</li>
+    <li><strong>Control board</strong>：車体中央の基板がSTC89C52を搭載した本制御回路。</li>
+    <li><strong>Sensors</strong>：前方に取り付けた光電センサが地面の黒線の有無を検出し、進行方向を判断。</li>
+    <li><strong>モータ</strong>：左右後輪のDCモータを独立制御し、黒線に沿った走行を実現。</li>
   </ul>
-
-
-<p>&nbsp;</p>
-<h3>回路図に使用した主な部品一覧</h3>
-
-<table class="custom-table">
-  <thead>
-    <tr>
-      <th>カテゴリ</th>
-      <th>型番 / 名称</th>
-      <th>数量</th>
-      <th>機能の説明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td rowspan="3">IC</td><td>MC34063</td><td>1</td><td>昇圧型DC-DCスイッチングレギュレータ</td></tr>
-    <tr><td>74HC573</td><td>1</td><td>8ビットラッチ、パラレル出力制御用</td></tr>
-    <tr><td>IR2104</td><td>2</td><td>ハイ・ローサイドMOSFETドライバ、Hブリッジ制御用</td></tr>
-
-    <tr><td>MOSFET</td><td>NチャネルMOSFET（例：IRF540N）</td><td>4</td><td>Hブリッジ構成、双方向負荷（モーターなど）制御</td></tr>
-
-    <tr><td rowspan="2">ダイオード</td><td>IN5819（ショットキーダイオード）</td><td>6</td><td>整流、フリーホイール、逆電流保護</td></tr>
-    <tr><td>LED（0805）</td><td>1</td><td>電源インジケータ</td></tr>
-
-    <tr><td>抵抗</td><td>各種抵抗（例：0.22Ω、10kΩ、33Ω）</td><td>17</td><td>分圧、電流制限、電流検出など</td></tr>
-
-    <tr><td>コンデンサ</td><td>各種（例：220μF、150pF、470μF）</td><td>7</td><td>フィルタ、安定化、カップリング・デカップリング</td></tr>
-
-    <tr><td>インダクタ</td><td>330μH</td><td>1</td><td>昇圧回路のエネルギー蓄積用</td></tr>
-
-    <tr><td>コネクタ</td><td>ソケット / ピンヘッダ（SIP2）</td><td>4</td><td>電源、信号、負荷用の接続端子</td></tr>
-  </tbody>
-</table>
 </div>
+
