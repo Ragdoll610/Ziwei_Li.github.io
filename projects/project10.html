@@ -1,15 +1,15 @@
 ---
 layout: project-detail
-title: 非視距目標検出・追跡
+title: FPV模型飛行機
 permalink: /projects/project8
 ---
 
-<h1>非視距目標の検出と追跡</h1>
+<h1>FPV模型飛行機</h1>
 
 <div style="margin-left: 1em;">
   <p>
-    <a href="{{ site.baseurl }}/images/project8.svg" class="zoomable-image-link">
-      <img src="{{ site.baseurl }}/images/project8.svg"
+    <a href="{{ site.baseurl }}/images/project10.svg" class="zoomable-image-link">
+      <img src="{{ site.baseurl }}/images/project10.svg"
            alt="System Overview"
            style="max-width: 80%; height: auto; display: block; margin: auto; cursor: zoom-in;">
     </a>
@@ -24,22 +24,23 @@ permalink: /projects/project8
 <div style="margin-left: 1em;">
   <h3>📌 研究概要：</h3>
   <p>
-    本プロジェクトでは、地面に敷設された50Hz交流信号を帯びた銅線を認識して走行する<strong>三輪電磁スマートカー</strong>を開発しました。
-    車両前方に設置された電磁誘導センサで進路を検知し、自作した信号増幅回路（オペアンプ回路）と制御基板（KEA128マイコン搭載）を用いて信号処理・判断・駆動を行います。
-    左右のモーターには差速制御を採用し、滑らかな旋回と高速走行を実現しました。
+    本プロジェクトでは、バルサ材を用いた自作木製機体に、飛行制御装置とFPV（First-Person View）システムを搭載した固定翼<strong>FPV模型飛行機</strong>を構築しました。
+    地上の操縦者は、機体に取り付けられたカメラからの映像をリアルタイムでモニタ上に受信し、まるで自分が機体に搭乗しているかのような視点で操作が可能です。
   </p>
   <p>
-    本システムは、模糊制御（ファジィ制御）によって進路の偏差を計算し、PID制御によって速度と旋回を安定的に制御するクローズドループ制御構成を特徴とします。
+    また、一つのカメラ映像を二系統の映像送信機に分配し、FPV表示用ディスプレイと観測用モニターの両方に表示できるように設計しました。
+    映像送信には5.8GHzの無線伝送を、操縦信号には2.4GHzのプロポ通信を使用しています。
   </p>
 </div>
 <div style="margin-left: 1em;">
-  <h3>🎥 動画紹介（走行デモ映像）</h3>
+  <h3>🎥 映像紹介（Flight Video）</h3>
   <p>
-    以下の動画では、本システムを搭載した三輪電磁スマートカーが実際に走行している様子を紹介しています。本車両は安定した状態で最大3.5 m/sの速度で走行が可能です。
+    下の動画では、飛行中の機体に搭載されたカメラから送信された映像を、地上の監視用モニターで受信した様子をご覧いただけます。
+    空中からの視点で、飛行経路や風景、目標エリアの接近などがリアルに映し出されています。
   </p>
 
   <video style="width: 80%; height: auto; display: block; margin: 0 auto;" controls muted>
-    <source src="{{ site.baseurl }}/images/video8.mp4" type="video/mp4">
+    <source src="{{ site.baseurl }}/images/video10.mp4" type="video/mp4">
     お使いのブラウザは video タグをサポートしていません。
   </video>
   
@@ -79,5 +80,20 @@ permalink: /projects/project8
       走行中の安定性を維持し、加速や減速の誤差を最小化。</li>
   </ul>
 
+  <p>&nbsp;</p>
+  <p><strong>モジュール③：ソフトウェア（Software）：</strong></p>
+  <p>ファジィ制御とPID制御を組み合わせ、センサデータに基づく精密な走行制御を実現するアルゴリズム群。</p>
+  <ul>
+    <li><strong>センサデータ取得部（Sensor Data Acquisition）</strong>：誘導センサのアナログ信号を連続的に読み取り、デジタル信号に変換。
+      センサ値の分布パターンから中心線とのずれを検出。</li>
+    <li><strong>ファジィロジック制御器（Fuzzy Logic Controller）</strong>：センサパターンを解析し、進路からの偏差量を推定。
+      PID制御に渡すためのエラー信号を出力。</li>
+    <li><strong>PID制御器（PID Motor Control）</strong>：ファジィ制御器の出力（進路エラー）とエンコーダの速度データを入力として受け取る。
+      左右のモーターに対し個別にPWM値と回転方向を計算し、差速で旋回制御を行う。
+      安定した走行速度とスムーズな方向転換を実現。</li>
+    <li><strong>エンコーダフィードバック（Encoder Feedback）</strong>：モーターの回転数を測定し、PID制御にリアルタイムな速度情報を提供。
+      走行中の安定性を維持し、加速や減速の誤差を最小化。</li>
+  </ul>
+  
 </div>
 
