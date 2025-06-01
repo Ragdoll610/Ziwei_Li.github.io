@@ -1,80 +1,49 @@
 ---
 layout: project-detail
-title: 制御回路
-permalink: /projects/project5
+title: 電源シミュレーション
+permalink: /projects/project15
 ---
 
-<h1>モータードライバ</h1>
+<h1>電源シミュレーション</h1>
+
 
 <div class="jp-title-box">
-  HブリッジDCモータードライバ
+  フルブリッジインバータ回路
 </div>
 
 <div style="margin-left: 1em;">
-  <p><strong>📌 プロジェクト概要：</strong></p>
+  <h3>📌 研究概要</h3>
   <p>
-    本プロジェクトでは、DCモータを制御するための<strong>Hブリッジモータドライバ回路</strong>を回路レベルから設計・製作しました。
-    昇圧・ロジック制御・ゲート駆動・出力ステージの各ブロックを構成し、実装後はセンサを搭載した可動式プラットフォームに応用しました。
+    本プロジェクトでは、RLC負荷を接続した<strong>フルブリッジインバータ回路</strong>を設計・シミュレーションしました。
+    主な目的は、直流入力を正弦波交流出力に変換し、負荷に対する周波数応答を観察することです。
+    システムはマルチシミュレーションによって50Hzおよび100Hzの出力波形を生成するよう設計されています。
   </p>
- 
   <p>
-    <a href="{{ site.baseurl }}/images/project5.svg" class="zoomable-image-link">
-      <img src="{{ site.baseurl }}/images/project5.svg"
+    <a href="{{ site.baseurl }}/images/project15.svg" class="zoomable-image-link">
+      <img src="{{ site.baseurl }}/images/project15.svg"
            alt="System Overview"
-           style="max-width: 100%; height: auto; display: block; margin: auto; cursor: zoom-in;">
+           style="max-width: 85%; height: auto; display: block; margin: auto; cursor: zoom-in;">
     </a>
   </p>
 </div>
-  
+
 <div style="margin-left: 1em;">
- <h3>1. 回路図（Circuit Schematic）</h3>
-  <p>本回路には、以下の主要モジュールが含まれています：</p>
+ <p>&nbsp;</p>
+ <p><strong> 回路構成（Circuit Configuration）</strong></p>
+ <p>フルブリッジインバータ回路は、4つのスイッチとNOTゲートによる簡易制御ロジックを用いて、直流入力を交流出力に変換します。</p>
   <ul>
-    <li><strong>昇圧回路（Boost Converter）</strong>：MC34063により入力電圧（7.2V）を12Vに昇圧し、ドライバや出力回路に電力供給を行います。</li>
-    <li><strong>ラッチ回路（Latch）</strong>：74HC573を用いて、制御信号（PWMなど）を一時的に保持し、信号の安定化を図ります。</li>
-    <li><strong>ドライバモジュール（Gate Driver）</strong>：IR2104による上下段MOSFETのゲート駆動回路で、MOSFETの確実なスイッチングを保証します。</li>
-    <li><strong>Hブリッジ回路（H-Bridge）</strong>：4つのMOSFETで構成されたHブリッジにより、モータの正転・逆転・制動を可能にします。</li>
+    <li><strong>フルブリッジインバータ（Full Bridge Inverter）</strong>：4つのスイッチ（MOSFET）を使用し、PWM制御により交互にON/OFFを切り替えることでAC出力を生成します。</li>
+    <li><strong>制御信号（Control Signals）</strong>：NOTゲートを用いたシンプルなインバータロジックにより、正弦波出力の切り替えを実現。</li>
+    <li><strong>負荷（Load）</strong>：抵抗（R）、インダクタンス（L）、コンデンサ（C）で構成されたRLC負荷を接続し、出力電圧波形の変化を観察します。</li>
   </ul>
+</div>
 
-  <h3>2. 基板レイアウト（PCB Layout）</h3>
-  <p>設計した回路を基に、プリント基板（PCB）を設計・製作・実装しました。</p>
-
-  <h3>3. 応用例（Application）</h3>
+<div style="margin-left: 1em;">
+ <p>&nbsp;</p>
+ <p><strong> シミュレーション結果（Simulation Results）</strong></p>
+ <p>シミュレーションでは、RLC負荷に対して50Hzと100Hzの正弦波出力が生成され、周波数による出力波形の違いが確認されました。</p>
   <ul>
-    <li><strong>左</strong>：電源アダプタ、制御ボード、DCモータと接続し、机上テストを実施。</li>
-    <li><strong>右</strong>：センシングプラットフォームに搭載し、センサやアンプ、バッテリーと連携して動作。</li>
+    <li><strong>入力電圧（Vi）</strong>：一定の直流電圧（約230V）を供給。</li>
+    <li><strong>出力電圧（Vo）</strong>：100Hz出力時：より細かいサイクルの正弦波を観測。50Hz出力時：周期が長く、より一般的な家庭用電力の形状に近い正弦波が得られました。</li>
   </ul>
-
-
-<p>&nbsp;</p>
-<h3>回路図に使用した主な部品一覧</h3>
-
-<table class="custom-table">
-  <thead>
-    <tr>
-      <th>カテゴリ</th>
-      <th>型番 / 名称</th>
-      <th>数量</th>
-      <th>機能の説明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td rowspan="3">IC</td><td>MC34063</td><td>1</td><td>昇圧型DC-DCスイッチングレギュレータ</td></tr>
-    <tr><td>74HC573</td><td>1</td><td>8ビットラッチ、パラレル出力制御用</td></tr>
-    <tr><td>IR2104</td><td>2</td><td>ハイ・ローサイドMOSFETドライバ、Hブリッジ制御用</td></tr>
-
-    <tr><td>MOSFET</td><td>NチャネルMOSFET（例：IRF540N）</td><td>4</td><td>Hブリッジ構成、双方向負荷（モーターなど）制御</td></tr>
-
-    <tr><td rowspan="2">ダイオード</td><td>IN5819（ショットキーダイオード）</td><td>6</td><td>整流、フリーホイール、逆電流保護</td></tr>
-    <tr><td>LED（0805）</td><td>1</td><td>電源インジケータ</td></tr>
-
-    <tr><td>抵抗</td><td>各種抵抗（例：0.22Ω、10kΩ、33Ω）</td><td>17</td><td>分圧、電流制限、電流検出など</td></tr>
-
-    <tr><td>コンデンサ</td><td>各種（例：220μF、150pF、470μF）</td><td>7</td><td>フィルタ、安定化、カップリング・デカップリング</td></tr>
-
-    <tr><td>インダクタ</td><td>330μH</td><td>1</td><td>昇圧回路のエネルギー蓄積用</td></tr>
-
-    <tr><td>コネクタ</td><td>ソケット / ピンヘッダ（SIP2）</td><td>4</td><td>電源、信号、負荷用の接続端子</td></tr>
-  </tbody>
-</table>
 </div>
