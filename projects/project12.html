@@ -1,80 +1,102 @@
 ---
 layout: project-detail
-title: 制御回路
-permalink: /projects/project5
+title: 航跡モデリングと実験
+permalink: /projects/project12
 ---
 
-<h1>モータードライバ</h1>
+<h1>航跡モデリングと実験</h1>
+
 
 <div class="jp-title-box">
-  HブリッジDCモータードライバ
+  船舶航跡のモデル化および実証実験
 </div>
 
 <div style="margin-left: 1em;">
-  <p><strong>📌 プロジェクト概要：</strong></p>
+  <h3>📌 研究概要</h3>
   <p>
-    本プロジェクトでは、DCモータを制御するための<strong>Hブリッジモータドライバ回路</strong>を回路レベルから設計・製作しました。
-    昇圧・ロジック制御・ゲート駆動・出力ステージの各ブロックを構成し、実装後はセンサを搭載した可動式プラットフォームに応用しました。
+    本研究では、ミリ波レーダーとカメラを組み合わせたセンサフュージョンにより、遮蔽物の裏側にある<strong>非視距（NLOS）目標の検出および追跡</strong>手法を提案します。
+    レーダー単体では直接観測できないNLOS目標に対し、反射面を介した一次反射点を利用することで、その存在を間接的に検出します。
   </p>
- 
   <p>
-    <a href="{{ site.baseurl }}/images/project5.svg" class="zoomable-image-link">
-      <img src="{{ site.baseurl }}/images/project5.svg"
+    また、カメラ画像から得られたセマンティック情報を用いて反射面を抽出し、反射点との幾何学的関係からNLOS目標の実位置を推定します。
+  </p>
+  <p>
+    最終的に、カルマンフィルタを用いて時間的に連続した追跡軌道を構築することで、動的なNLOS物体に対してリアルタイムな追跡を可能にしています。
+  </p>
+  <p>
+    本手法は、都市環境や自動運転システムにおける死角の安全確保に有効な技術基盤となります。
+  </p>
+</div>
+
+<div style="margin-left: 1em;">
+ <p>&nbsp;</p>
+ <p><strong>🧭 研究動機</strong></p>
+  <ul>
+    <li>カメラはNLOS目標自体を捉えることはできませんが、周囲環境のセマンティクス（例：壁・地面・建物など）を正確に認識できます。</li>
+    <li>ミリ波レーダーは、NLOS目標からのマルチパス反射（一次反射や二次反射）を捉えることができ、目標の「間接的な痕跡」として観測可能です。</li>
+    <li>しかし、これらの反射点を正確に解釈するには、反射面との幾何的関係を理解し、反射点と真の目標を対応付けることが鍵となります。</li>
+  </ul>
+</div>
+
+
+<div style="margin-left: 1em;">
+  <p>
+    <a href="{{ site.baseurl }}/images/project11_1.svg" class="zoomable-image-link">
+      <img src="{{ site.baseurl }}/images/project11_1.svg"
            alt="System Overview"
-           style="max-width: 100%; height: auto; display: block; margin: auto; cursor: zoom-in;">
+           style="max-width: 80%; height: auto; display: block; margin: auto; cursor: zoom-in;">
     </a>
   </p>
 </div>
-  
+
 <div style="margin-left: 1em;">
- <h3>1. 回路図（Circuit Schematic）</h3>
-  <p>本回路には、以下の主要モジュールが含まれています：</p>
+  <p>&nbsp;</p>
+  <p><strong>🔍 提案手法</strong></p>
+  <p>本研究では、以下の2つのセンサ分岐からなるセマンティクス誘導型NLOS目標追跡フレームワーク（SG-NLOSTrack）を提案します：</p>
+
+  <p>
+    <a href="{{ site.baseurl }}/images/project11_2.svg" class="zoomable-image-link">
+      <img src="{{ site.baseurl }}/images/project11_2.svg"
+           alt="System Overview"
+           style="max-width: 90%; height: auto; display: block; margin: auto; cursor: zoom-in;">
+    </a>
+  </p>
+
+  <p><strong>カメラブランチ（Camera Branch）</strong></p>
   <ul>
-    <li><strong>昇圧回路（Boost Converter）</strong>：MC34063により入力電圧（7.2V）を12Vに昇圧し、ドライバや出力回路に電力供給を行います。</li>
-    <li><strong>ラッチ回路（Latch）</strong>：74HC573を用いて、制御信号（PWMなど）を一時的に保持し、信号の安定化を図ります。</li>
-    <li><strong>ドライバモジュール（Gate Driver）</strong>：IR2104による上下段MOSFETのゲート駆動回路で、MOSFETの確実なスイッチングを保証します。</li>
-    <li><strong>Hブリッジ回路（H-Bridge）</strong>：4つのMOSFETで構成されたHブリッジにより、モータの正転・逆転・制動を可能にします。</li>
+    <li>連続画像を2次元セグメンテーションネットワークに入力し、壁や建物などの反射面をピクセルレベルで抽出。</li>
+    <li>得られたセグメント画像により、反射面の幾何構造（平面）を推定します（Plane Fitting）。</li>
   </ul>
-
-  <h3>2. 基板レイアウト（PCB Layout）</h3>
-  <p>設計した回路を基に、プリント基板（PCB）を設計・製作・実装しました。</p>
-
-  <h3>3. 応用例（Application）</h3>
+  <p><strong>レーダーブランチ（Radar Branch）</strong></p>
   <ul>
-    <li><strong>左</strong>：電源アダプタ、制御ボード、DCモータと接続し、机上テストを実施。</li>
-    <li><strong>右</strong>：センシングプラットフォームに搭載し、センサやアンプ、バッテリーと連携して動作。</li>
+    <li>複数フレームのレーダーポイントクラウドを3Dセグメンテーションネットワークに入力し、一次反射点を含む意味的な構造を分類。</li>
+    <li>セグメント化された点群から、反射点クラスタを抽出します。</li>
   </ul>
-
-
-<p>&nbsp;</p>
-<h3>回路図に使用した主な部品一覧</h3>
-
-<table class="custom-table">
-  <thead>
-    <tr>
-      <th>カテゴリ</th>
-      <th>型番 / 名称</th>
-      <th>数量</th>
-      <th>機能の説明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td rowspan="3">IC</td><td>MC34063</td><td>1</td><td>昇圧型DC-DCスイッチングレギュレータ</td></tr>
-    <tr><td>74HC573</td><td>1</td><td>8ビットラッチ、パラレル出力制御用</td></tr>
-    <tr><td>IR2104</td><td>2</td><td>ハイ・ローサイドMOSFETドライバ、Hブリッジ制御用</td></tr>
-
-    <tr><td>MOSFET</td><td>NチャネルMOSFET（例：IRF540N）</td><td>4</td><td>Hブリッジ構成、双方向負荷（モーターなど）制御</td></tr>
-
-    <tr><td rowspan="2">ダイオード</td><td>IN5819（ショットキーダイオード）</td><td>6</td><td>整流、フリーホイール、逆電流保護</td></tr>
-    <tr><td>LED（0805）</td><td>1</td><td>電源インジケータ</td></tr>
-
-    <tr><td>抵抗</td><td>各種抵抗（例：0.22Ω、10kΩ、33Ω）</td><td>17</td><td>分圧、電流制限、電流検出など</td></tr>
-
-    <tr><td>コンデンサ</td><td>各種（例：220μF、150pF、470μF）</td><td>7</td><td>フィルタ、安定化、カップリング・デカップリング</td></tr>
-
-    <tr><td>インダクタ</td><td>330μH</td><td>1</td><td>昇圧回路のエネルギー蓄積用</td></tr>
-
-    <tr><td>コネクタ</td><td>ソケット / ピンヘッダ（SIP2）</td><td>4</td><td>電源、信号、負荷用の接続端子</td></tr>
-  </tbody>
-</table>
+  <p><strong>情報統合と追跡（Tracking）</strong></p>
+  <ul>
+    <li>カメラとレーダーの空間対応付けにより、反射点と反射面の関係を幾何的に解析。</li>
+    <li>これをもとに、RS方程式（反射面に対する鏡像対称性）を適用し、NLOS目標の推定位置を復元します。</li>
+    <li>複数フレームの結果をもとに、カルマンフィルタを適用して連続的な追跡軌跡を生成します。</li>
+  </ul>
 </div>
+
+<div style="margin-left: 1em;">
+  <h3>🎥 結果と可視化</h3>
+  <p> 本動画では、壁の裏に存在する非視距（NLOS）目標の追跡過程を示しています。
+    提案手法により、一次反射点と反射面の情報から、NLOS目標の真の位置を鏡面対称で復元し、カルマンフィルタによって平滑な追跡を実現しています。</p>
+  <ul>
+    <li>黒色の点は、「GNSSによる真値（Ground Truth）」を示します。</li>
+    <li>赤い「×」は、「NLOS目標の実際の位置（真の位置）」を示します。</li>
+    <li>水色の点や線は、レーダーで観測された一次反射点およびその軌跡です。</li>
+    <li>赤い線は、NLOS目標の追跡軌跡であり、推定された実位置の連続を表します。</li>
+    <li>黒の破線は、反射面の位置を示しています。</li>
+  </ul>
+  <video style="width: 80%; height: auto; display: block; margin: 0 auto;" controls muted>
+    <source src="{{ site.baseurl }}/images/video12.mp4" type="video/mp4">
+    お使いのブラウザは video タグをサポートしていません。
+  </video>
+  
+</div>
+
+
+
