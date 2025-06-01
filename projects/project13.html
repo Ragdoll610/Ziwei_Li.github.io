@@ -35,7 +35,7 @@ permalink: /projects/project13
   </p>
 
   <h3>シミュレーション結果と考察</h3>
-  <p>図下部の比較グラフから、単一ループ制御（左）に比べて、**カスケード制御（右）では以下のような性能改善が確認された：</p>
+  <p>図下部の比較グラフから、単一ループ制御（左）に比べて、カスケード制御（右）では以下のような性能改善が確認された：</p>
   <ul>
     <li>応答速度の向上（立ち上がり時間の短縮）。</li>
     <li>定常値への収束が早く、振動成分が大幅に減少。</li>
@@ -48,47 +48,41 @@ permalink: /projects/project13
 
 <p>&nbsp;</p>
 <div class="jp-title-box">
-  2）STC89C52マイコン制御回路
+  2）模糊PID二重閉ループ制御システム
 </div>
 
 <div style="margin-left: 1em;">
   <h3>📌 プロジェクト概要：</h3>
   <p>
-    本プロジェクトでは、<strong>STC89C52</strong>（8051系8ビットマイコン） を搭載した制御基板を設計・製作し、三輪ロボットに応用しました。
-    本基板は、モータ制御・センサ入力・電源供給といった基本機能を1枚に統合し、ロボットの自律走行を実現します。
+    本プロジェクトでは、模糊比例・積分・微分（PID）制御器に基づいた<strong>二重閉ループDCモーター速度制御システム</strong>の設計と性能評価を行った。
+    Simulink環境を用いて制御器のパラメータを推定し、伝統的なPID制御と模糊PID制御の応答特性を比較・検討した。
   </p>
  
   <p>
-    <a href="{{ site.baseurl }}/images/project1_2.svg" class="zoomable-image-link">
-      <img src="{{ site.baseurl }}/images/project1_2.svg"
+    <a href="{{ site.baseurl }}/images/project13_2.svg" class="zoomable-image-link">
+      <img src="{{ site.baseurl }}/images/project13_2.svg"
            alt="System Overview"
-           style="max-width: 100%; height: auto; display: block; margin: auto; cursor: zoom-in;">
+           style="max-width: 80%; height: auto; display: block; margin: auto; cursor: zoom-in;">
     </a>
   </p>
 </div>
   
 <div style="margin-left: 1em;">
- <h3>1. 回路図（Circuit Schematic）</h3>
-  <p>本回路には、以下の主要モジュールが含まれています：</p>
-  <ul>
-    <li><strong>STC89C52最小システム</strong>：リセット回路、クロック回路、基本I/O接続を含む。</li>
-    <li><strong>光電センサ入力</strong>：地面の黒線を検出するフォトセンサ（反射型）を複数搭載。</li>
-    <li><strong>モータドライバ（Gate Driver）</strong>：L298NによるDCモータの駆動制御。</li>
-    <li><strong>電源回路</strong>：外部からの電源を安定化し、5Vで各回路に供給。</li>
-  </ul>
-
-  <h3>2. 基板レイアウト（PCB Layout）</h3>
-  <p>
-    本基板は、STC89C52を中心に、モータドライバIC、センサ端子、スイッチ、電源系を効率的に配置した一体型制御基板です。
-    シンプルな2層設計により、配線が明確で、組立とデバッグが容易。
+ <h3>制御システム構成</h3>
+  <p>図に示すように、本制御システムは内側速度ループと外側電流ループの二重閉ループ構造を採用し、それぞれに模糊論理を組み込んだPID制御器を実装している。
+    システムはステップ信号に応答し、速度とトルクを同時に制御することで、応答性能と安定性の向上を図っている。
+    Simulinkモデルでは、各伝達関数と制御ブロックが明示的に構成されており、模糊制御器が従来型PIDに代わって導入されている。
   </p>
 
-  <h3>3. 応用例（Application）</h3>
-  <p>実装済み基板は、三輪移動ロボットに搭載され、以下のように動作します：</p>
+  <h3>シミュレーション結果と考察</h3>
+  <p>図の下部に示すように、左側が伝統的なPID制御によるステップ応答、右側が模糊PID制御による応答である。比較の結果、模糊PID制御では以下のような改善が見られた：</p>
   <ul>
-    <li><strong>Control board</strong>：車体中央の基板がSTC89C52を搭載した本制御回路。</li>
-    <li><strong>Sensors</strong>：前方に取り付けた光電センサが地面の黒線の有無を検出し、進行方向を判断。</li>
-    <li><strong>モータ</strong>：左右後輪のDCモータを独立制御し、黒線に沿った走行を実現。</li>
+    <li>オーバーシュートの大幅な低減。</li>
+    <li>セッティングタイム（定常状態到達時間）の短縮。</li>
+    <li>応答の振動抑制と速やかな収束。</li>
+    <li>システムの動特性および安定性の向上。</li>
   </ul>
+  <p>以上から、模糊PID制御はDCモーターの速度制御において高い適応性を持ち、従来のPID制御よりも優れた性能を発揮することが確認された。</p>
 </div>
+
 
