@@ -11,12 +11,11 @@ permalink: /projects/project11
     <a href="{{ site.baseurl }}/images/project11_1.svg" class="zoomable-image-link">
       <img src="{{ site.baseurl }}/images/project11_1.svg"
            alt="System Overview"
-           style="max-width: 80%; height: auto; display: block; margin: auto; cursor: zoom-in;">
+           style="max-width: 70%; height: auto; display: block; margin: auto; cursor: zoom-in;">
     </a>
   </p>
 </div>
 
-<p>&nbsp;</p>
 <div class="jp-title-box">
   SG-NLOSTrack: 非視距目標検出・追跡
 </div>
@@ -52,17 +51,26 @@ permalink: /projects/project11
   <p>&nbsp;</p>
   <p><strong>🔍 提案手法</strong></p>
   <p>本研究では、以下の2つのセンサ分岐からなるセマンティクス誘導型NLOS目標追跡フレームワーク（SG-NLOSTrack）を提案します：</p>
-  <p><strong>📷 カメラブランチ（Camera Branch）</strong></p>
+
+  <p>
+    <a href="{{ site.baseurl }}/images/project11_2.svg" class="zoomable-image-link">
+      <img src="{{ site.baseurl }}/images/project11_2.svg"
+           alt="System Overview"
+           style="max-width: 80%; height: auto; display: block; margin: auto; cursor: zoom-in;">
+    </a>
+  </p>
+
+  <p><strong>カメラブランチ（Camera Branch）</strong></p>
   <ul>
     <li>連続画像を2次元セグメンテーションネットワークに入力し、壁や建物などの反射面をピクセルレベルで抽出。</li>
     <li>得られたセグメント画像により、反射面の幾何構造（平面）を推定します（Plane Fitting）。</li>
   </ul>
-  <p><strong>📡 レーダーブランチ（Radar Branch）</strong></p>
+  <p><strong>レーダーブランチ（Radar Branch）</strong></p>
   <ul>
     <li>複数フレームのレーダーポイントクラウドを3Dセグメンテーションネットワークに入力し、一次反射点を含む意味的な構造を分類。</li>
     <li>セグメント化された点群から、反射点クラスタを抽出します。</li>
   </ul>
-  <p><strong>🔄 情報統合と追跡（Tracking）</strong></p>
+  <p><strong>情報統合と追跡（Tracking）</strong></p>
   <ul>
     <li>カメラとレーダーの空間対応付けにより、反射点と反射面の関係を幾何的に解析。</li>
     <li>これをもとに、RS方程式（反射面に対する鏡像対称性）を適用し、NLOS目標の推定位置を復元します。</li>
