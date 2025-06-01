@@ -1,80 +1,76 @@
 ---
 layout: project-detail
-title: 制御回路
-permalink: /projects/project5
+title: Verilog設計と検証
+permalink: /projects/project16
 ---
 
-<h1>モータードライバ</h1>
+<h1>Verilog設計と検証</h1>
 
+<div style="margin-left: 1em;">
+  <p>
+    <a href="{{ site.baseurl }}/images/project16.svg" class="zoomable-image-link">
+      <img src="{{ site.baseurl }}/images/project16.svg"
+           alt="System Overview"
+           style="max-width: 80%; height: auto; display: block; margin: auto; cursor: zoom-in;">
+    </a>
+  </p>
+</div>
+
+<p>&nbsp;</p>
 <div class="jp-title-box">
-  HブリッジDCモータードライバ
+  1）4ビット可逆同期カウンタ
 </div>
 
 <div style="margin-left: 1em;">
-  <p><strong>📌 プロジェクト概要：</strong></p>
+  <h3>📌 プロジェクト概要：</h3>
   <p>
-    本プロジェクトでは、DCモータを制御するための<strong>Hブリッジモータドライバ回路</strong>を回路レベルから設計・製作しました。
-    昇圧・ロジック制御・ゲート駆動・出力ステージの各ブロックを構成し、実装後はセンサを搭載した可動式プラットフォームに応用しました。
-  </p>
- 
-  <p>
-    <a href="{{ site.baseurl }}/images/project5.svg" class="zoomable-image-link">
-      <img src="{{ site.baseurl }}/images/project5.svg"
-           alt="System Overview"
-           style="max-width: 100%; height: auto; display: block; margin: auto; cursor: zoom-in;">
-    </a>
+    本プロジェクトは、Verilog HDL を用いて <strong>4ビットの可逆同期カウンタ</strong>を設計するものであり、デジタル回路設計に関する課題研究の一環として実施されました。
+    Quartus II にて設計したプログラムをコンパイルし、波形シミュレーションによってその動作を検証しました。
   </p>
 </div>
   
 <div style="margin-left: 1em;">
- <h3>1. 回路図（Circuit Schematic）</h3>
-  <p>本回路には、以下の主要モジュールが含まれています：</p>
-  <ul>
-    <li><strong>昇圧回路（Boost Converter）</strong>：MC34063により入力電圧（7.2V）を12Vに昇圧し、ドライバや出力回路に電力供給を行います。</li>
-    <li><strong>ラッチ回路（Latch）</strong>：74HC573を用いて、制御信号（PWMなど）を一時的に保持し、信号の安定化を図ります。</li>
-    <li><strong>ドライバモジュール（Gate Driver）</strong>：IR2104による上下段MOSFETのゲート駆動回路で、MOSFETの確実なスイッチングを保証します。</li>
-    <li><strong>Hブリッジ回路（H-Bridge）</strong>：4つのMOSFETで構成されたHブリッジにより、モータの正転・逆転・制動を可能にします。</li>
-  </ul>
+ <h3>設計方針</h3>
+  <p>本カウンタは、クロック信号（CLK）の立ち上がりエッジで同期して動作する構造になっています。
+    制御信号「X」によって加算モード（X=1）または減算モード（X=0）を切り替えることができ、リセット信号（RST）が 1 のときには出力 Q が “0000” に初期化されます。
+    通常動作時には、加算モードでは “0000” から “1111” へ、減算モードでは “1111” から “0000” へと 1 クロックごとにカウントされます。
+  </p>
 
-  <h3>2. 基板レイアウト（PCB Layout）</h3>
-  <p>設計した回路を基に、プリント基板（PCB）を設計・製作・実装しました。</p>
-
-  <h3>3. 応用例（Application）</h3>
-  <ul>
-    <li><strong>左</strong>：電源アダプタ、制御ボード、DCモータと接続し、机上テストを実施。</li>
-    <li><strong>右</strong>：センシングプラットフォームに搭載し、センサやアンプ、バッテリーと連携して動作。</li>
-  </ul>
-
+  <h3>シミュレーション結果</h3>
+  <p>下図に示すように、シミュレーションでは RST 信号が 1 の間に Q は “0000” に保持され、X=1 の状態ではカウントが上昇し、X=0 に切り替えると下降カウントに変化していることが確認されます。
+    この結果により、可逆カウンタとしてのすべての機能が正しく実装されていることが証明されました。</p>
+</div>
 
 <p>&nbsp;</p>
-<h3>回路図に使用した主な部品一覧</h3>
-
-<table class="custom-table">
-  <thead>
-    <tr>
-      <th>カテゴリ</th>
-      <th>型番 / 名称</th>
-      <th>数量</th>
-      <th>機能の説明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td rowspan="3">IC</td><td>MC34063</td><td>1</td><td>昇圧型DC-DCスイッチングレギュレータ</td></tr>
-    <tr><td>74HC573</td><td>1</td><td>8ビットラッチ、パラレル出力制御用</td></tr>
-    <tr><td>IR2104</td><td>2</td><td>ハイ・ローサイドMOSFETドライバ、Hブリッジ制御用</td></tr>
-
-    <tr><td>MOSFET</td><td>NチャネルMOSFET（例：IRF540N）</td><td>4</td><td>Hブリッジ構成、双方向負荷（モーターなど）制御</td></tr>
-
-    <tr><td rowspan="2">ダイオード</td><td>IN5819（ショットキーダイオード）</td><td>6</td><td>整流、フリーホイール、逆電流保護</td></tr>
-    <tr><td>LED（0805）</td><td>1</td><td>電源インジケータ</td></tr>
-
-    <tr><td>抵抗</td><td>各種抵抗（例：0.22Ω、10kΩ、33Ω）</td><td>17</td><td>分圧、電流制限、電流検出など</td></tr>
-
-    <tr><td>コンデンサ</td><td>各種（例：220μF、150pF、470μF）</td><td>7</td><td>フィルタ、安定化、カップリング・デカップリング</td></tr>
-
-    <tr><td>インダクタ</td><td>330μH</td><td>1</td><td>昇圧回路のエネルギー蓄積用</td></tr>
-
-    <tr><td>コネクタ</td><td>ソケット / ピンヘッダ（SIP2）</td><td>4</td><td>電源、信号、負荷用の接続端子</td></tr>
-  </tbody>
-</table>
+<div class="jp-title-box">
+  2）3-to-8 デコーダ
 </div>
+
+<div style="margin-left: 1em;">
+  <h3>📌 プロジェクト概要：</h3>
+  <p>
+    本プロジェクトでは、3 ビットのバイナリ入力に基づいて 8 ビットのワンホット出力を生成する<strong> 3-to-8 デコーダ</strong>を設計しました。
+    Verilog HDL を用いて回路を記述し、Quartus II により論理合成と波形シミュレーションを行い、出力動作を確認しました
+  </p>
+</div>
+  
+<div style="margin-left: 1em;">
+ <h3>設計方針</h3>
+  <p>本デコーダは、3 ビットの入力（S[2:0]）を用いて、8 ビット出力（mout）のうち 1 ビットだけを “1” に設定し、残りを “0” にする「ワンホット」形式で出力します。
+    これは 2³＝8 通りの組み合わせに対応し、各入力に対して出力が一意に決まるように設計されています。
+    Verilog HDL では case 文を用いて入力と出力の関係を記述し、同期動作によって各出力状態が切り替わるようにしています。
+  </p>
+
+  <h3>シミュレーション結果</h3>
+  <p>下以下のシミュレーション波形（図）に示すように、各時間帯で入力 S に応じた出力 mout の動作が確認できます：</p>
+  <ul>
+    <li>0 ～ 5 µs：S = 100 → mout = 00010000</li>
+    <li>5 ～ 15 µs：S = 001 → mout = 00000010</li>
+    <li>15 ～ 25 µs：S = 101 → mout = 00100000</li>
+    <li>25 ～ 30 µs：S = 011 → mout = 00001000</li>
+    <li>30 ～ 40 µs：S = 111 → mout = 10000000</li>
+    <li>40 ～ 50 µs：S = 110 → mout = 01000000</li>
+  </ul>
+</div>
+
+
