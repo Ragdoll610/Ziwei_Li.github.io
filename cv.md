@@ -19,7 +19,7 @@ permalink: /cv/
 <div class="card-group-1">
   <h2>Education</h2>
   <div class="edu-row">
-    <div class="label">2023 - 現在</div>
+    <div class="label">2024 - 現在</div>
     <div class="value">東京大学　機械工学専攻　博士課程在学</div>
   </div>
   <div class="edu-row">
